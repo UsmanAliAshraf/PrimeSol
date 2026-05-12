@@ -29,7 +29,7 @@ export default function Features() {
         <section className="mt-32">
             <SectionTitle
                 title="Our Services"
-                description="We build modern websites, scalable web apps, and AI-powered solutions that help businesses work smarter and grow faster."
+                description="We build websites, apps, and automations that help teams work with less friction."
             />
 
             <div className="flex flex-wrap items-center justify-center gap-6 mt-10 px-6">

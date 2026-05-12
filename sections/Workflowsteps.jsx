@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { ExternalLinkIcon } from "lucide-react";
+import Link from "next/link";
 
 const steps = [
   {
     id: 1,
     title: " The Ringer",
     description:
-      " A modern digital media platform blending sports, culture, and entertainment into sharp, opinion-led content ecosystems ",
+      "A content-heavy publishing experience with strong navigation, fast browsing, and room for articles, shows, and media.",
     link: "https://www.theringer.com/",
     image: "/assets/ringer.png",
   },
@@ -15,7 +16,7 @@ const steps = [
     id: 2,
     title: "UseParallel",
     description:
-      "A powerful tool for parallel processing and optimization accelerating workflows and improving performance.",
+      "A workflow product focused on speed, clarity, and helping teams move through complex work with less friction.",
     link: "https://www.useparallel.com/",
     image: "/assets/parallel.png",
   },
@@ -23,7 +24,7 @@ const steps = [
     id: 3,
     title: "Taxif",
     description:
-      "Ride-hailing app offering convenient transportation solutions with a user-friendly interface.",
+      "A ride-booking app concept with clean trip flows, booking details, and simple mobile-first navigation.",
     link: "https://apps.apple.com/",
     image: "/assets/taxi.png",
   },
@@ -34,7 +35,7 @@ export default function WorkflowSteps() {
     <section className="mt-32 relative">
       <SectionTitle
           tag="Our Projects"
-          description="A few of the 100+ projects delivered for founders and businesses worldwide."
+          description="A quick look at the kind of interfaces and product flows we can plan, design, and build."
       />
 
       <motion.div
@@ -91,12 +92,13 @@ export default function WorkflowSteps() {
         ))}
       </motion.div>
       <div className="mt-16 flex justify-center">
-        <a
+        <Link
           href="/projects"
-          className="rounded-full border border-purple-500/40 bg-purple-600 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(147,51,234,0.35)] transition hover:bg-purple-700"
+          scroll={false}
+          className="rounded-full border border-sky-400/40 bg-sky-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(56,189,248,0.35)] transition hover:bg-sky-600"
         >
           View All Projects
-        </a>
+        </Link>
       </div>
     </section>
   );

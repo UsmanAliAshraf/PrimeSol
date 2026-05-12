@@ -1,32 +1,32 @@
 export const faqsData = [
-     {
+  {
     question: "What services does PrimeSol offer?",
     answer:
-      "PrimeSol provides AI automation, custom web development, SaaS applications, mobile app development, and scalable business software solutions tailored to modern businesses.",
+      "PrimeSol builds websites, web apps, mobile apps, dashboards, CRM and HRM systems, e-commerce stores, and automation tools for businesses that need practical software.",
   },
   {
-    question: "Do you build custom software solutions?",
+    question: "Do you build custom software?",
     answer:
-      "Yes, we specialize in fully customized software and AI-powered systems designed according to your business goals, workflows, and operational requirements.",
+      "Yes. We usually start by understanding how your team works, then design a system around your actual process instead of forcing you into a ready-made template.",
   },
   {
     question: "Can PrimeSol automate my business processes?",
     answer:
-      "Absolutely. We develop AI agents and automation systems that help businesses reduce manual work, improve efficiency, manage leads, automate customer support, and streamline operations.",
+      "Yes. We can automate lead intake, customer replies, booking flows, reporting, reminders, handoffs, and other repetitive tasks that slow your team down.",
   },
   {
     question: "How long does a project usually take?",
     answer:
-      "Project timelines depend on complexity and features. Simple websites may take a few days, while advanced SaaS platforms or AI systems can take several weeks.",
+      "It depends on scope. A focused website can move quickly, while a custom app, SaaS product, or automation system needs more planning, development, and review.",
   },
   {
     question: "Do you provide support after project completion?",
     answer:
-      "Yes, we provide ongoing maintenance, updates, technical support, and scalability assistance after deployment to ensure smooth business operations.",
+      "Yes. We can stay involved after launch for fixes, improvements, new features, speed checks, and general technical support.",
   },
   {
     question: "Which technologies does PrimeSol use?",
     answer:
-      "We work with modern technologies including Next.js, React, Node.js, FastAPI, Python, AI frameworks, PostgreSQL, MongoDB, and cloud deployment platforms.",
+      "We choose the stack based on the project. Common tools include Next.js, React, Node.js, Python, FastAPI, PostgreSQL, MongoDB, AI APIs, and cloud hosting platforms.",
   },
 ];

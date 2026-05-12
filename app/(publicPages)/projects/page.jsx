@@ -13,6 +13,12 @@ import {
   LayoutDashboard,
   Cpu,
   BriefcaseBusiness,
+  Palette,
+  GraduationCap,
+  Wallet,
+  Plane,
+  Building2,
+  LineChart,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -23,134 +29,249 @@ const fadeUp = {
 
 const tabs = [
   "All",
+  "UI/UX",
   "Websites",
-  "Web Apps",
+  "SaaS Platforms",
+  "E-Commerce",
   "Mobile Apps",
-  "AI Automation",
-  "E-commerce",
-  "CRM / HRM",
+  "AI & Blockchain",
+  "EdTech",
 ];
 
 const projects = [
   {
-    title: "Corporate Business Website",
-    category: "Websites",
-    icon: Globe,
-    image: "/assets/ringer.png",
-    description:
-      "A professional company website built with modern sections, responsive layout, service pages, and lead-focused call-to-actions.",
-    tags: ["Website", "Branding", "Responsive"],
-    link: "/contact",
-  },
-  {
-    title: "Software Agency Website",
-    category: "Websites",
-    icon: Globe,
-    image: "/assets/parallel.png",
-    description:
-      "A premium agency website designed to present services, portfolio, team, process, testimonials, and strong conversion flows.",
-    tags: ["Agency", "Portfolio", "UI/UX"],
-    link: "/contact",
-  },
-  {
-    title: "SaaS Analytics Dashboard",
-    category: "Web Apps",
-    icon: Cpu,
-    image: "/assets/parallel.png",
-    description:
-      "A SaaS dashboard with analytics, user roles, data cards, charts, subscriptions, and scalable business management features.",
-    tags: ["SaaS", "Dashboard", "Analytics"],
-    link: "/contact",
-  },
-  {
-    title: "Admin Management Panel",
-    category: "Web Apps",
+    title: "Material UI CRM Dashboard",
+    category: "UI/UX",
     icon: LayoutDashboard,
-    image: "/assets/taxi.png",
+    image: "/assets/projects/material-ui-crm-dashboard.png",
     description:
-      "A custom admin panel for managing users, records, reports, operations, workflow status, and internal business data.",
-    tags: ["Admin Panel", "Backend", "Management"],
-    link: "/contact",
+      "A Material UI-based CRM dashboard concept for sales and business management workflows, with clean analytics views and enterprise-style layouts.",
+    tags: ["UI/UX", "Dashboard", "CRM"],
+    link: "https://dashboard-mui-two.vercel.app/",
   },
   {
-    title: "Ride Booking Mobile App",
-    category: "Mobile Apps",
-    icon: Smartphone,
-    image: "/assets/taxi.png",
+    title: "E-commerce Checkout Flow",
+    category: "UI/UX",
+    icon: ShoppingCart,
+    image: "/assets/projects/ecommerce-checkout-flow.png",
     description:
-      "A mobile app interface for ride booking with simple user flow, booking management, live status, and clean navigation.",
-    tags: ["Mobile App", "Booking", "Transport"],
-    link: "/contact",
+      "A Next.js checkout prototype focused on a smoother cart-to-payment flow, responsive behavior, and fewer points of friction for buyers.",
+    tags: ["UI/UX", "Checkout", "Next.js"],
+    link: "https://e-commerce-website-one-rosy.vercel.app/",
   },
   {
-    title: "Service Booking App",
-    category: "Mobile Apps",
-    icon: Smartphone,
+    title: "Figma UI/UX Design Collection",
+    category: "UI/UX",
+    icon: Palette,
+    image: "/assets/projects/figma-ui-ux-collection.png",
+    description:
+      "A curated set of Figma designs for websites, dashboards, SaaS platforms, mobile apps, e-commerce flows, and brand-focused product screens.",
+    tags: ["Figma", "Design Systems", "Prototypes"],
+    link: "/contact",
+    linkLabel: "Request Prototypes",
+  },
+  {
+    title: "Fairagora Asia",
+    category: "Websites",
+    icon: Globe,
     image: "/assets/ringer.png",
     description:
-      "A mobile-first service booking solution where users can select services, book slots, and receive instant updates.",
-    tags: ["Appointments", "App Flow", "UX"],
+      "A business website project included in the portfolio list, available for discussion during a project walkthrough.",
+    tags: ["Website", "Business", "Portfolio"],
     link: "/contact",
+    linkLabel: "Ask About Project",
   },
   {
-    title: "AI Receptionist Agent",
-    category: "AI Automation",
+    title: "Alexander Kraft",
+    category: "Websites",
+    icon: Globe,
+    image: "/assets/projects/alexander-kraft.png",
+    description:
+      "A high-end lifestyle brand website with elegant presentation, luxury visual direction, and an immersive brand experience.",
+    tags: ["Luxury", "Brand Website", "Lifestyle"],
+    link: "https://alexanderkraft.com",
+  },
+  {
+    title: "Midwest Land Group",
+    category: "Websites",
+    icon: Building2,
+    image: "/assets/projects/midwest-land-group.png",
+    description:
+      "A real estate platform for land and property discovery, with listing structures built for browsing, filtering, and responsive viewing.",
+    tags: ["Real Estate", "Listings", "Responsive"],
+    link: "https://midwestlandgroup.com",
+  },
+  {
+    title: "Asset Planet",
+    category: "Websites",
+    icon: LineChart,
+    image: "/assets/projects/asset-planet.png",
+    description:
+      "A wealth management platform with a professional financial services presentation and a polished user experience.",
+    tags: ["Finance", "Wealth", "Platform"],
+    link: "https://assetplanet.com",
+  },
+  {
+    title: "Airport Pilot Shop",
+    category: "E-Commerce",
+    icon: Plane,
+    image: "/assets/projects/airport-pilot-shop.png",
+    description:
+      "An aviation gear e-commerce store designed for product browsing, online purchasing, and customer-focused shopping flows.",
+    tags: ["E-Commerce", "Aviation", "Retail"],
+    link: "https://airportpilotshop.com",
+  },
+  {
+    title: "Farm to People",
+    category: "E-Commerce",
+    icon: ShoppingCart,
+    image: "/assets/projects/farm-to-people.png",
+    description:
+      "A farm-to-table e-commerce platform connecting customers with fresh produce suppliers through a clean shopping experience.",
+    tags: ["Food", "E-Commerce", "Marketplace"],
+    link: "https://farmtopeople.com",
+  },
+  {
+    title: "Data Rovers",
+    category: "SaaS Platforms",
+    icon: Cpu,
+    image: "/assets/projects/data-rovers.png",
+    description:
+      "A data-focused platform centered on analytics, information systems, and scalable web architecture.",
+    tags: ["Data", "SaaS", "Analytics"],
+    link: "https://datarovers.com/",
+  },
+  {
+    title: "Positive Prime",
+    category: "SaaS Platforms",
+    icon: BriefcaseBusiness,
+    image: "/assets/projects/positive-prime.png",
+    description:
+      "A membership-based web application with user authentication and platform features built for a growing subscriber base.",
+    tags: ["Membership", "Web App", "SaaS"],
+    link: "https://positiveprime.com",
+  },
+  {
+    title: "UseParallel",
+    category: "SaaS Platforms",
+    icon: Cpu,
+    image: "/assets/projects/useparallel.png",
+    description:
+      "A productivity SaaS platform built around collaboration, workflow management, and helping teams move faster.",
+    tags: ["Productivity", "SaaS", "Workflow"],
+    link: "https://useparallel.com",
+  },
+  {
+    title: "AI Dashboard Concept",
+    category: "AI & Blockchain",
     icon: Bot,
     image: "/assets/parallel.png",
     description:
-      "An AI receptionist that responds to customer queries, collects details, checks availability, and books appointments automatically.",
-    tags: ["AI Agent", "Leads", "Automation"],
+      "A predictive analytics dashboard concept showing machine learning visualizations and business intelligence patterns.",
+    tags: ["AI", "Analytics", "Dashboard"],
     link: "/contact",
+    linkLabel: "Request Demo",
   },
   {
-    title: "Real Estate AI Assistant",
-    category: "AI Automation",
+    title: "Chatbot SaaS Prototype",
+    category: "AI & Blockchain",
     icon: Bot,
-    image: "/assets/taxi.png",
-    description:
-      "An AI assistant that understands property requirements, recommends suitable listings, captures leads, and notifies the sales team.",
-    tags: ["AI Assistant", "Real Estate", "CRM"],
-    link: "/contact",
-  },
-  {
-    title: "Fashion E-commerce Store",
-    category: "E-commerce",
-    icon: ShoppingCart,
     image: "/assets/ringer.png",
     description:
-      "A complete online store with product catalog, cart, checkout, product filters, payment setup, and order management.",
-    tags: ["E-commerce", "Checkout", "Products"],
+      "A customer support automation prototype with chatbot integrations, conversational flows, and automated assistance.",
+    tags: ["Chatbot", "SaaS", "Support"],
     link: "/contact",
+    linkLabel: "Request Demo",
   },
   {
-    title: "Shopify Product Store",
-    category: "E-commerce",
-    icon: ShoppingCart,
-    image: "/assets/parallel.png",
+    title: "Woebot Health",
+    category: "AI & Blockchain",
+    icon: Bot,
+    image: "/assets/projects/woebot-health.png",
     description:
-      "A Shopify-based product store with custom theme setup, product management, payment integration, and sales-focused design.",
-    tags: ["Shopify", "Store", "Sales"],
-    link: "/contact",
+      "An AI-driven mental health companion platform using conversational guidance to support emotional wellbeing.",
+    tags: ["AI", "Healthcare", "Chat"],
+    link: "https://woebothealth.com",
   },
   {
-    title: "Sales CRM System",
-    category: "CRM / HRM",
-    icon: BriefcaseBusiness,
+    title: "Callidus AI",
+    category: "AI & Blockchain",
+    icon: Bot,
+    image: "/assets/projects/callidus-ai.png",
+    description:
+      "An AI productivity platform focused on workflow improvement, intelligent automation, and enterprise efficiency.",
+    tags: ["AI", "Productivity", "Enterprise"],
+    link: "https://strongsuit.com/",
+  },
+  {
+    title: "Inecta Food",
+    category: "AI & Blockchain",
+    icon: Cpu,
+    image: "/assets/projects/inecta-food.png",
+    description:
+      "A blockchain-powered food supply chain platform built for transparency, tracking, and operational trust.",
+    tags: ["Blockchain", "Food", "Supply Chain"],
+    link: "https://inecta.com",
+  },
+  {
+    title: "Cashii Wallet",
+    category: "Mobile Apps",
+    icon: Wallet,
     image: "/assets/taxi.png",
     description:
-      "A CRM platform for managing leads, customers, sales pipelines, follow-ups, communication, and business reporting.",
-    tags: ["CRM", "Leads", "Sales"],
-    link: "/contact",
+      "A crypto wallet mobile application focused on secure asset management and accessible financial tools.",
+    tags: ["Fintech", "Crypto", "Mobile"],
+    link: "https://apps.apple.com/us/app/cashii-crypto-wallet/id6468092902",
   },
   {
-    title: "HRM Management Portal",
-    category: "CRM / HRM",
-    icon: BriefcaseBusiness,
-    image: "/assets/ringer.png",
+    title: "Dubai Mall App",
+    category: "Mobile Apps",
+    icon: Smartphone,
+    image: "/assets/projects/dubai-mall.png",
     description:
-      "An HRM portal for employee records, attendance, leaves, payroll, HR requests, and internal company operations.",
-    tags: ["HRM", "Employees", "Portal"],
-    link: "/contact",
+      "A retail mobile experience for shopping, store discovery, navigation, and customer engagement inside Dubai Mall.",
+    tags: ["Retail", "Shopping", "Mobile"],
+    link: "https://thedubaimall.com",
+  },
+  {
+    title: "Taxif",
+    category: "Mobile Apps",
+    icon: Smartphone,
+    image: "/assets/projects/taxif.png",
+    description:
+      "A transportation and ride-booking application designed for real-time ride management and customer convenience.",
+    tags: ["Ride-Hailing", "Transport", "Mobile"],
+    link: "https://www.taxif.com/en",
+  },
+  {
+    title: "GoAudits",
+    category: "Mobile Apps",
+    icon: Smartphone,
+    image: "/assets/projects/goaudits.png",
+    description:
+      "An enterprise auditing app supporting inspections, reporting workflows, and operational management.",
+    tags: ["Enterprise", "Audits", "Mobile"],
+    link: "https://goaudits.com",
+  },
+  {
+    title: "Alter Learning",
+    category: "EdTech",
+    icon: GraduationCap,
+    image: "/assets/projects/alter-learning.png",
+    description:
+      "A gamified education platform with progress tracking, engagement systems, and collaborative learning experiences.",
+    tags: ["Education", "Gamified", "Learning"],
+    link: "https://alter-learning.com",
+  },
+  {
+    title: "Alef Education",
+    category: "EdTech",
+    icon: GraduationCap,
+    image: "/assets/projects/alef-education.png",
+    description:
+      "A scalable edtech ecosystem with adaptive learning, analytics, and multi-device educational experiences.",
+    tags: ["EdTech", "Analytics", "Learning"],
+    link: "https://alefeducation.com",
   },
 ];
 
@@ -165,12 +286,34 @@ const industries = [
   "Startups",
   "E-commerce",
   "Real Estate",
+  "Fintech",
   "Healthcare",
   "Education",
+  "SaaS Teams",
   "Service Businesses",
-  "Agencies",
-  "Local Businesses",
+  "Enterprise Teams",
 ];
+
+function ProjectAction({ project }) {
+  const label = project.linkLabel || "View Project";
+  const className = "flex items-center gap-2 text-sm font-medium text-sky-600 dark:text-sky-300";
+
+  if (project.link?.startsWith("http")) {
+    return (
+      <a href={project.link} target="_blank" rel="noreferrer" className={className}>
+        {label}
+        <ExternalLink className="size-4" />
+      </a>
+    );
+  }
+
+  return (
+    <Link href={project.link || "/contact"} scroll={false} className={className}>
+      {label}
+      <ExternalLink className="size-4" />
+    </Link>
+  );
+}
 
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState("All");
@@ -201,9 +344,9 @@ export default function ProjectsPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Digital Projects Built for{" "}
-          <span className="bg-gradient-to-r from-[#923FEF] to-[#C35DE8] bg-clip-text text-transparent dark:from-[#C99DFF] dark:to-[#E1C9FF]">
-            Real Business Growth
+          Work Examples Across{" "}
+          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+            Real Business Needs
           </span>
         </motion.h1>
 
@@ -214,8 +357,8 @@ export default function ProjectsPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Explore our recent work across websites, web applications, mobile
-          apps, AI automation, e-commerce, CRM, and HRM solutions.
+          Browse selected work across UI/UX, websites, SaaS platforms,
+          e-commerce, mobile apps, AI, blockchain, and education products.
         </motion.p>
       </div>
 
@@ -224,7 +367,7 @@ export default function ProjectsPage() {
         <SectionTitle
           text1="Featured Work"
           text2="Explore Projects by Category"
-          text3="Click a category to view relevant projects built for different business needs."
+          text3="The projects are grouped by category so you can quickly find work close to what you need."
         />
 
         <div className="mx-auto mt-10 flex max-w-6xl flex-wrap items-center justify-center gap-3 px-6">
@@ -235,8 +378,8 @@ export default function ProjectsPage() {
               onClick={() => setActiveTab(tab)}
               className={`rounded-full border px-5 py-2 text-sm transition ${
                 activeTab === tab
-                  ? "border-purple-500 bg-purple-600 text-white shadow-[0_0_25px_rgba(147,51,234,0.35)]"
-                  : "border-slate-200 bg-white text-slate-600 hover:-translate-y-0.5 hover:border-purple-500/40 dark:border-slate-800 dark:bg-slate-800/20 dark:text-slate-300"
+                  ? "border-sky-400 bg-sky-500 text-white shadow-[0_0_25px_rgba(56,189,248,0.35)]"
+                  : "border-slate-200 bg-white text-slate-600 hover:-translate-y-0.5 hover:border-sky-400/40 dark:border-slate-800 dark:bg-slate-800/20 dark:text-slate-300"
               }`}
             >
               {tab}
@@ -247,7 +390,7 @@ export default function ProjectsPage() {
         <p className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
           Showing {filteredProjects.length} project
           {filteredProjects.length > 1 ? "s" : ""} in{" "}
-          <span className="text-purple-500">{activeTab}</span>
+          <span className="text-sky-400">{activeTab}</span>
         </p>
 
         <motion.div
@@ -260,7 +403,7 @@ export default function ProjectsPage() {
           {filteredProjects.map((project, index) => (
             <motion.div
               key={`${activeTab}-${index}`}
-              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_0_40px_rgba(147,51,234,0.08)] transition hover:-translate-y-2 hover:border-purple-500/30 dark:border-slate-800 dark:bg-slate-900/50"
+              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_0_40px_rgba(56,189,248,0.10)] transition hover:-translate-y-2 hover:border-sky-400/30 dark:border-slate-800 dark:bg-slate-900/50"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -271,6 +414,9 @@ export default function ProjectsPage() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  onError={(event) => {
+                    event.currentTarget.src = "/assets/parallel.png";
+                  }}
                   className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
@@ -290,7 +436,7 @@ export default function ProjectsPage() {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-xs text-purple-600 dark:text-purple-300"
+                      className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs text-sky-700 dark:text-sky-300"
                     >
                       {tag}
                     </span>
@@ -304,15 +450,9 @@ export default function ProjectsPage() {
                 </p>
 
                 <div className="mt-6 flex items-center justify-between">
-                  <Link
-                    href={project.link}
-                    className="flex items-center gap-2 text-sm font-medium text-purple-600 dark:text-purple-300"
-                  >
-                    View Project
-                    <ExternalLink className="size-4" />
-                  </Link>
+                  <ProjectAction project={project} />
 
-                  <div className="flex size-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 transition group-hover:bg-purple-600 dark:border-slate-700 dark:bg-slate-800">
+                  <div className="flex size-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 transition group-hover:bg-sky-500 dark:border-slate-700 dark:bg-slate-800">
                     <ArrowRight className="size-4 transition group-hover:text-white" />
                   </div>
                 </div>
@@ -327,7 +467,7 @@ export default function ProjectsPage() {
         <SectionTitle
           text1="Our Process"
           text2="How We Build Projects"
-          text3="A clear process from idea to launch, focused on quality and business results."
+          text3="We keep each project moving with clear planning, design, development, and launch support."
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-4">
@@ -341,7 +481,7 @@ export default function ProjectsPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="mx-auto flex size-11 items-center justify-center rounded-full bg-purple-600 text-white">
+              <div className="mx-auto flex size-11 items-center justify-center rounded-full bg-sky-500 text-white">
                 {index + 1}
               </div>
               <h3 className="mt-5 text-base font-semibold">{step}</h3>
@@ -354,8 +494,8 @@ export default function ProjectsPage() {
       <section className="mt-28 px-6 md:px-16 lg:px-24 xl:px-35">
         <SectionTitle
           text1="Industries"
-          text2="Projects for Different Business Types"
-          text3="We build solutions for startups, agencies, service businesses, e-commerce brands, and growing teams."
+          text2="Built for Different Teams"
+          text3="We work with startups, agencies, service businesses, online stores, and companies with internal operations to manage."
         />
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -385,22 +525,22 @@ export default function ProjectsPage() {
         transition={{ duration: 0.6 }}
       >
         <h3 className="mb-4 mt-16 text-3xl font-semibold">
-          Have a Similar Project in Mind?
+          Have Something Similar in Mind?
         </h3>
 
         <p className="mx-auto max-w-xl text-slate-600 dark:text-slate-200">
-          Let’s build a modern digital solution tailored to your business goals.
+          Share the idea with us and we will help turn it into a realistic plan.
         </p>
 
         <div className="mt-8 flex items-center gap-4">
-          <Link href="/contact">
-            <button className="h-11 rounded-md bg-purple-600 px-6 text-white transition hover:bg-purple-700">
+          <Link href="/contact" scroll={false}>
+            <button className="h-11 rounded-md bg-sky-500 px-6 text-white transition hover:bg-sky-600">
               Start Your Project
             </button>
           </Link>
 
-          <Link href="/about">
-            <button className="h-11 rounded-md border border-purple-900 px-6 text-slate-600 transition dark:text-white">
+          <Link href="/about" scroll={false}>
+            <button className="h-11 rounded-md border border-sky-500/40 px-6 text-slate-600 transition dark:text-white">
               About PrimeSol
             </button>
           </Link>

@@ -10,7 +10,7 @@ export default function Pricing() {
     return (
         <div className="relative">
             <Image className="absolute -mt-20 md:-mt-100 md:left-20 pointer-events-none" src={theme === "dark" ? "/assets/color-splash.svg" : "/assets/color-splash-light.svg"} alt="color-splash" width={1000} height={1000} priority fetchPriority="high" />
-            <SectionTitle text1="PRICING" text2="Our Pricing Plans" text3="Flexible pricing options designed to meet your needs — whether you're just getting started or scaling up." />
+            <SectionTitle text1="PRICING" text2="Our Pricing Plans" text3="Simple starting points. Final pricing depends on scope, features, and timeline." />
 
             <div className="flex flex-wrap items-center justify-center gap-6 mt-16">
                 {pricingData.map((plan, index) => (

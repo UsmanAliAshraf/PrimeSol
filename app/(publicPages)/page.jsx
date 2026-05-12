@@ -1,21 +1,15 @@
 "use client";
 
 import SectionTitle from "@/components/SectionTitle";
-import { useThemeContext } from "@/context/ThemeContext";
-import { companiesLogo } from "@/data/companiesLogo";
 import { servicesData } from "@/data/servicesData";
 import { FaqSection } from "@/sections/FaqSection";
 import WorkflowSteps from "@/sections/Workflowsteps";
-import OurTestimonials from "@/sections/our-testimonials";
 import { VideoIcon } from "lucide-react";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Page() {
-    const { theme } = useThemeContext();
-
     const smoothFade = {
         hidden: { opacity: 0, y: 40 },
         visible: {
@@ -59,59 +53,52 @@ export default function Page() {
                             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=50&h=50&auto=format&fit=crop"
                             alt="userImage3" />
                     </div>
-                    <p className="text-xs">Join community of 1m+ founders</p>
+                    <p className="text-xs">Websites, apps, automations, and software support</p>
                 </motion.div>
 
                 {/* Heading */}
                 <motion.h1 variants={smoothFade} className="mt-2 text-5xl/15 md:text-[64px]/19 font-semibold max-w-4xl">
-                    We Build Digital Solutions That Help{" "}
-                    <span className="bg-gradient-to-r from-[#923FEF] dark:from-[#C99DFF] to-[#C35DE8] dark:to-[#E1C9FF] bg-clip-text text-transparent">
-                        Businesses Grow
+                    We Build Reliable Software for{" "}
+                    <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+                        Ambitious Teams
                     </span>
                 </motion.h1>
 
                 {/* Paragraph */}
                 <motion.p variants={smoothFade} className="text-base dark:text-slate-300 max-w-xl mt-2">
-                    Custom websites, scalable web apps, AI-driven automation, and SaaS solutions designed to streamline your operations and accelerate business growth.
+                    PrimeSol helps businesses launch cleaner websites, automate busywork, and build practical software that supports daily operations without unnecessary complexity.
                 </motion.p>
 
                 {/* Buttons (ONLY hover animation) */}
                 <div className="flex items-center gap-4 mt-8">
-                    <motion.button
+                    <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
-                        className="bg-purple-600 hover:bg-purple-700 text-white rounded-md px-6 h-11"
                     >
-                        Explore Services
-                    </motion.button>
+                        <Link
+                            href="/services"
+                            scroll={false}
+                            className="inline-flex h-11 items-center justify-center rounded-md bg-sky-500 px-6 text-white hover:bg-sky-600"
+                        >
+                            Explore Services
+                        </Link>
+                    </motion.div>
 
-                    <motion.button
+                    <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
-                        className="flex items-center gap-2 border border-purple-900 text-slate-600 dark:text-white rounded-md px-6 h-11"
                     >
-                        <VideoIcon strokeWidth={1} />
-                        <span>Watch demo</span>
-                    </motion.button>
+                        <Link
+                            href="/projects"
+                            scroll={false}
+                            className="inline-flex h-11 items-center gap-2 rounded-md border border-sky-500/40 px-6 text-slate-600 dark:text-white"
+                        >
+                            <VideoIcon strokeWidth={1} />
+                            <span>View Projects</span>
+                        </Link>
+                    </motion.div>
                 </div>
 
-                {/* Logos */}
-                <motion.h3 variants={smoothFade} className="text-base text-slate-400 mt-28 pb-14 font-medium">
-                    Trusting by leading brands, including —
-                </motion.h3>
-
-                <Marquee
-                    className="max-w-5xl mx-auto"
-                    gradient={true}
-                    speed={25}
-                    gradientColor={theme === "dark" ? "#000" : "#fff"}
-                >
-                    <div className="flex items-center justify-center">
-                        {[...companiesLogo, ...companiesLogo].map((company, index) => (
-                            <Image key={index} className="mx-11" src={company.logo} alt={company.name} width={100} height={100} />
-                        ))}
-                    </div>
-                </Marquee>
             </motion.div>
 
             {/* SERVICES */}
@@ -127,7 +114,7 @@ export default function Page() {
                         viewport={{ once: true }}
                         className="p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80"
                     >
-                        <service.icon className="text-purple-500 size-8 mt-4" strokeWidth={1.3} />
+                        <service.icon className="text-sky-400 size-8 mt-4" strokeWidth={1.3} />
                         <h3 className="text-base font-medium">{service.title}</h3>
                         <p className="text-slate-400 line-clamp-2">{service.description}</p>
                     </motion.div>
@@ -136,8 +123,8 @@ export default function Page() {
 
             {/* View All */}
             <div className="flex justify-center mt-6">
-                <Link href="/services">
-                    <button className="bg-purple-600 hover:bg-purple-700 text-white rounded-md px-6 py-2">
+                <Link href="/services" scroll={false}>
+                    <button className="bg-sky-500 hover:bg-sky-600 text-white rounded-md px-6 py-2">
                         View All Services
                     </button>
                 </Link>
@@ -146,10 +133,6 @@ export default function Page() {
             {/* OTHER SECTIONS */}
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
                 <WorkflowSteps />
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-                <OurTestimonials />
             </motion.div>
 
             {/* FAQ FIXED */}
@@ -176,17 +159,25 @@ export default function Page() {
                 </h3>
 
                 <p className="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
-                    Join thousands of satisfied customers and transform your business today.
+                    Tell us what you are trying to build. We will help you shape the right scope, stack, and launch plan.
                 </p>
 
                 <div className="flex gap-4 mt-8">
-                    <button className="bg-purple-600 hover:bg-purple-700 text-white rounded-md px-6 h-11">
-                        Start free trial
-                    </button>
+                    <Link
+                        href="/contact"
+                        scroll={false}
+                        className="inline-flex h-11 items-center justify-center rounded-md bg-sky-500 px-6 text-white hover:bg-sky-600"
+                    >
+                        Start Your Project
+                    </Link>
 
-                    <button className="border border-purple-900 text-slate-600 dark:text-white rounded-md px-6 h-11">
-                        Contact sales
-                    </button>
+                    <Link
+                        href="/contact"
+                        scroll={false}
+                        className="inline-flex h-11 items-center justify-center rounded-md border border-sky-500/40 px-6 text-slate-600 dark:text-white"
+                    >
+                        Book a Call
+                    </Link>
                 </div>
             </motion.div>
         </>

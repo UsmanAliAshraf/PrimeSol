@@ -10,8 +10,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-    title: "Landing - PrebuiltUI",
-    description: "Landing is a SaaS template for developers to build SaaS applications.",
+    title: "PrimeSol — Websites, Apps & Automation",
+    description:
+        "PrimeSol helps businesses build clear websites, useful apps, internal dashboards, online stores, and automation systems.",
 };
 
 export default function RootLayout({ children }) {

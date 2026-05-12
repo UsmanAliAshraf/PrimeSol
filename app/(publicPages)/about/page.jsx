@@ -7,10 +7,10 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Members from "@/sections/members";
 import Link from "next/link";
 const points = [
-  "Custom websites and web applications",
-  "AI automation for business workflows",
-  "SaaS platforms and internal dashboards",
-  "Scalable, clean, and modern development",
+  "Clear websites that explain your offer",
+  "Automations that remove repetitive work",
+  "Dashboards and portals for daily operations",
+  "Clean builds that are easy to maintain",
 ];
 const fadeUp = { hidden: { y: 80, opacity: 0 }, visible: { y: 0, opacity: 1 } };
 function Counter({ end, suffix = "" }) {
@@ -79,10 +79,10 @@ export default function AboutPage() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           {" "}
-          Building Digital Solutions That Help{" "}
-          <span className="bg-gradient-to-r from-[#923FEF] dark:from-[#C99DFF] to-[#C35DE8] dark:to-[#E1C9FF] bg-clip-text text-transparent">
+          Building Useful Software for{" "}
+          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
             {" "}
-            Businesses Grow{" "}
+            Real Business Work{" "}
           </span>{" "}
         </motion.h1>{" "}
         <motion.p
@@ -93,9 +93,9 @@ export default function AboutPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {" "}
-          PrimeSol helps startups and businesses build modern websites, scalable
-          web apps, SaaS platforms, and AI automation systems that improve
-          operations and accelerate growth.{" "}
+          PrimeSol helps businesses turn rough ideas, manual processes, and
+          scattered tools into websites, apps, and systems that are easier to
+          run every day.{" "}
         </motion.p>{" "}
         <motion.div
           className="flex items-center gap-4 mt-8"
@@ -105,16 +105,16 @@ export default function AboutPage() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {" "}
-          <Link href="/services">
+          <Link href="/services" scroll={false}>
             {" "}
-            <button className="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
+            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
               {" "}
               Explore Services{" "}
             </button>{" "}
           </Link>{" "}
-          <Link href="/contact">
+          <Link href="/contact" scroll={false}>
             {" "}
-            <button className="flex items-center gap-2 border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+            <button className="flex items-center gap-2 border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
               {" "}
               Contact Us <ArrowRight className="size-4" />{" "}
             </button>{" "}
@@ -126,8 +126,8 @@ export default function AboutPage() {
         {" "}
         <SectionTitle
           text1="Who We Are"
-          text2="Technology Partner for Modern Businesses"
-          text3="We create practical digital solutions that solve real business problems."
+          text2="A Practical Tech Partner for Growing Teams"
+          text3="We focus on software that is useful, clear, and built around how your business actually works."
         />{" "}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12 items-center">
           {" "}
@@ -142,21 +142,20 @@ export default function AboutPage() {
             {" "}
             <h3 className="text-2xl font-semibold mb-4">
               {" "}
-              We turn business ideas into scalable digital products.{" "}
+              We turn business problems into working products.{" "}
             </h3>{" "}
             <p className="text-slate-600 dark:text-slate-300 text-sm/7">
               {" "}
-              At PrimeSol, we focus on building websites, web applications,
-              mobile apps, SaaS platforms, and AI-powered automation systems.
-              Our goal is to help businesses reduce manual work, improve
-              workflows, and grow with reliable technology.{" "}
+              At PrimeSol, we build websites, web applications, mobile apps,
+              SaaS products, dashboards, and automation systems. Our job is to
+              understand what is slowing your team down, then build the right
+              tool to make that work easier.{" "}
             </p>{" "}
             <p className="text-slate-600 dark:text-slate-300 text-sm/7 mt-4">
               {" "}
-              We combine clean UI design, modern development practices, and
-              automation-first thinking to deliver solutions that are not only
-              visually strong but also useful for day-to-day business
-              operations.{" "}
+              We care about clean design, stable development, and simple
+              handover. The final product should look professional, work
+              reliably, and make sense to the people using it.{" "}
             </p>{" "}
           </motion.div>{" "}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -173,7 +172,7 @@ export default function AboutPage() {
               >
                 {" "}
                 <CheckCircle2
-                  className="text-purple-500 size-7 mb-4"
+                  className="text-sky-400 size-7 mb-4"
                   strokeWidth={1.5}
                 />{" "}
                 <p className="text-sm font-medium text-slate-700 dark:text-slate-200">
@@ -190,8 +189,8 @@ export default function AboutPage() {
         {" "}
         <SectionTitle
           text1="What We Do"
-          text2="Solutions Built for Growth"
-          text3="From websites to AI automation, we build systems that support your business."
+          text2="What We Help You Build"
+          text3="From first website to internal software, we help you ship the tools your team needs."
         />{" "}
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-10 px-6 md:px-16 lg:px-24 xl:px-35">
           {" "}
@@ -207,7 +206,7 @@ export default function AboutPage() {
             >
               {" "}
               <service.icon
-                className="text-purple-500 size-8 mt-4"
+                className="text-sky-400 size-8 mt-4"
                 strokeWidth={1.3}
               />{" "}
               <h3 className="text-base font-medium">{service.title}</h3>{" "}
@@ -227,9 +226,9 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
         >
           {" "}
-          <Link href="/services">
+          <Link href="/services" scroll={false}>
             {" "}
-            <button className="bg-purple-600 hover:bg-purple-700 text-white rounded-md px-6 py-2 transition">
+            <button className="bg-sky-500 hover:bg-sky-600 text-white rounded-md px-6 py-2 transition">
               {" "}
               View More{" "}
             </button>{" "}
@@ -241,8 +240,8 @@ export default function AboutPage() {
         {" "}
         <SectionTitle
           text1="Our Impact"
-          text2="Numbers That Reflect Our Growth"
-          text3="We focus on delivering reliable digital solutions that create real business value."
+          text2="A Few Simple Measures"
+          text3="Our work is measured by shipped projects, happy clients, and systems that keep doing their job."
         />{" "}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-10">
           {" "}
@@ -257,7 +256,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5, delay: index * 0.12 }}
             >
               {" "}
-              <h3 className="text-4xl font-semibold bg-gradient-to-r from-[#923FEF] dark:from-[#C99DFF] to-[#C35DE8] dark:to-[#E1C9FF] bg-clip-text text-transparent">
+              <h3 className="text-4xl font-semibold bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
                 {" "}
                 {index === 0 && <Counter end={150} suffix="+" />}{" "}
                 {index === 1 && <Counter end={50} suffix="+" />}{" "}
@@ -267,7 +266,7 @@ export default function AboutPage() {
                 {" "}
                 {index === 0 && "Projects Delivered"}{" "}
                 {index === 1 && "Business Clients"}{" "}
-                {index === 2 && "Growth Focused"}{" "}
+                {index === 2 && "Delivery Focused"}{" "}
               </p>{" "}
             </motion.div>
           ))}{" "}
@@ -285,25 +284,25 @@ export default function AboutPage() {
         {" "}
         <h3 className="text-3xl font-semibold mt-16 mb-4">
           {" "}
-          Ready to Build Your Next Digital Solution?{" "}
+          Ready to Build Something Useful?{" "}
         </h3>{" "}
         <p className="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
           {" "}
-          Let’s create a modern website, app, or AI automation system that helps
-          your business grow.{" "}
+          Let us help you plan the website, app, or automation your business
+          actually needs next.{" "}
         </p>{" "}
         <div className="flex items-center gap-4 mt-8">
           {" "}
-          <Link href="/contact">
+          <Link href="/contact" scroll={false}>
             {" "}
-            <button className="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
+            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
               {" "}
               Get Started{" "}
             </button>{" "}
           </Link>{" "}
-          <Link href="/projects">
+          <Link href="/projects" scroll={false}>
             {" "}
-            <button className="border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+            <button className="border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
               {" "}
               View Projects{" "}
             </button>{" "}

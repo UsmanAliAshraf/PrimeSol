@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    value: "+92 300 0000000",
+    value: "+923198622852",
   },
   {
     icon: MapPin,
@@ -51,6 +51,27 @@ const services = [
 ];
 
 export default function ContactPage() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const subject = encodeURIComponent("New PrimeSol project inquiry");
+    const body = encodeURIComponent(
+      [
+        `Full Name: ${formData.get("name") || ""}`,
+        `Email: ${formData.get("email") || ""}`,
+        `Phone: ${formData.get("phone") || ""}`,
+        `Service Needed: ${formData.get("service") || ""}`,
+        `Project Budget: ${formData.get("budget") || ""}`,
+        "",
+        "Project Details:",
+        formData.get("details") || "",
+      ].join("\n"),
+    );
+
+    window.location.href = `mailto:info@primesol.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <>
       {/* Hero */}
@@ -72,9 +93,9 @@ export default function ContactPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Let’s Build Your Next{" "}
-          <span className="bg-gradient-to-r from-[#923FEF] to-[#C35DE8] bg-clip-text text-transparent dark:from-[#C99DFF] dark:to-[#E1C9FF]">
-            Digital Solution
+          Let’s Talk About Your Next{" "}
+          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+            Project
           </span>
         </motion.h1>
 
@@ -85,8 +106,8 @@ export default function ContactPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Tell us about your idea, business need, or automation goal. Our team
-          will help you plan and build the right solution.
+          Tell us what you are trying to build, fix, or automate. We will help
+          you figure out the best next step.
         </motion.p>
       </div>
 
@@ -103,7 +124,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-purple-600/10 text-purple-500">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400">
                 <item.icon className="size-6" strokeWidth={1.5} />
               </div>
 
@@ -120,8 +141,8 @@ export default function ContactPage() {
       <section className="mt-28 px-6 md:px-16 lg:px-24 xl:px-35">
         <SectionTitle
           text1="Start a Conversation"
-          text2="Tell Us About Your Project"
-          text3="Fill out the form and we’ll get back to you with the best solution for your business."
+          text2="Tell Us What You Need"
+          text3="A short message is enough. We can help shape the details from there."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -134,30 +155,30 @@ export default function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex size-14 items-center justify-center rounded-2xl bg-purple-600 text-white">
+            <div className="flex size-14 items-center justify-center rounded-2xl bg-sky-500 text-white">
               <MessageSquare className="size-7" strokeWidth={1.5} />
             </div>
 
             <h3 className="mt-6 text-3xl font-semibold">
-              Need help choosing the right solution?
+              Not sure where to start?
             </h3>
 
             <p className="mt-4 text-sm/7 text-slate-600 dark:text-slate-300">
-              Whether you need a website, web application, mobile app, AI agent,
-              CRM, HRM, or e-commerce store, PrimeSol can help you turn your
-              idea into a scalable digital product.
+              Whether you need a website, app, automation, CRM, HRM, or online
+              store, we can help you understand the scope and choose a sensible
+              way to build it.
             </p>
 
             <div className="mt-8 space-y-4">
               {[
                 "Free initial project discussion",
-                "Clear scope and technical guidance",
-                "Modern design and scalable development",
-                "Post-launch support and improvements",
+                "Clear scope and practical technical guidance",
+                "Design and development handled together",
+                "Support and improvements after launch",
               ].map((point, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle2
-                    className="size-5 text-purple-500"
+                    className="size-5 text-sky-400"
                     strokeWidth={1.5}
                   />
                   <p className="text-sm text-slate-600 dark:text-slate-300">
@@ -171,7 +192,7 @@ export default function ContactPage() {
               <p className="text-sm text-slate-500 dark:text-slate-300">
                 Average response time
               </p>
-              <h4 className="mt-1 text-2xl font-semibold text-purple-500">
+              <h4 className="mt-1 text-2xl font-semibold text-sky-400">
                 Within 24 Hours
               </h4>
             </div>
@@ -179,7 +200,8 @@ export default function ContactPage() {
 
           {/* Form */}
           <motion.form
-            className="rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_0_40px_rgba(147,51,234,0.08)] dark:border-slate-800 dark:bg-slate-900/60"
+            onSubmit={handleSubmit}
+            className="rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_0_40px_rgba(56,189,248,0.10)] dark:border-slate-800 dark:bg-slate-900/60"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -191,8 +213,9 @@ export default function ContactPage() {
                 <label className="text-sm font-medium">Full Name</label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
-                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-purple-500 dark:border-slate-800 dark:bg-slate-800/40"
+                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
                 />
               </div>
 
@@ -200,8 +223,9 @@ export default function ContactPage() {
                 <label className="text-sm font-medium">Email Address</label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="you@example.com"
-                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-purple-500 dark:border-slate-800 dark:bg-slate-800/40"
+                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
                 />
               </div>
 
@@ -209,14 +233,15 @@ export default function ContactPage() {
                 <label className="text-sm font-medium">Phone Number</label>
                 <input
                   type="text"
-                  placeholder="+92 300 0000000"
-                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-purple-500 dark:border-slate-800 dark:bg-slate-800/40"
+                  name="phone"
+                  placeholder="+923198622852"
+                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
                 />
               </div>
 
               <div>
                 <label className="text-sm font-medium">Service Needed</label>
-                <select className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-purple-500 dark:border-slate-800 dark:bg-slate-800/40">
+                <select name="service" className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40">
                   <option>Select service</option>
                   {services.map((service, index) => (
                     <option key={index}>{service}</option>
@@ -227,7 +252,7 @@ export default function ContactPage() {
 
             <div className="mt-5">
               <label className="text-sm font-medium">Project Budget</label>
-              <select className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-purple-500 dark:border-slate-800 dark:bg-slate-800/40">
+              <select name="budget" className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40">
                 <option>Select budget range</option>
                 <option>$500 - $1,000</option>
                 <option>$1,000 - $3,000</option>
@@ -240,14 +265,15 @@ export default function ContactPage() {
               <label className="text-sm font-medium">Project Details</label>
               <textarea
                 rows={6}
+                name="details"
                 placeholder="Tell us about your project..."
-                className="mt-2 w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-purple-500 dark:border-slate-800 dark:bg-slate-800/40"
+                className="mt-2 w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
               />
             </div>
 
             <button
-              type="button"
-              className="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-6 text-white transition hover:bg-purple-700"
+              type="submit"
+              className="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-6 text-white transition hover:bg-sky-600"
             >
               Send Message
               <Send className="size-4" />
@@ -270,19 +296,18 @@ export default function ContactPage() {
         </h3>
 
         <p className="mx-auto max-w-xl text-slate-600 dark:text-slate-200">
-          Let’s discuss your idea and build a modern digital solution for your
-          business.
+          Let’s discuss your idea and decide what should happen next.
         </p>
 
         <div className="mt-8 flex items-center gap-4">
-          <Link href="/projects">
-            <button className="h-11 rounded-md bg-purple-600 px-6 text-white transition hover:bg-purple-700">
+          <Link href="/projects" scroll={false}>
+            <button className="h-11 rounded-md bg-sky-500 px-6 text-white transition hover:bg-sky-600">
               View Projects
             </button>
           </Link>
 
-          <Link href="/services">
-            <button className="h-11 rounded-md border border-purple-900 px-6 text-slate-600 transition dark:text-white">
+          <Link href="/services" scroll={false}>
+            <button className="h-11 rounded-md border border-sky-500/40 px-6 text-slate-600 transition dark:text-white">
               View Services
             </button>
           </Link>

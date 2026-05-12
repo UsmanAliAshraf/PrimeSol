@@ -2,86 +2,86 @@ import { CheckIcon } from "lucide-react";
 
 export const pricingData = [
     {
-        title: "Basic Plan",
+        title: "Starter Build",
         price: 29,
         features: [
             {
-                name: "5 Projects",
+                name: "Single-page or small website",
                 icon: CheckIcon,
             },
             {
-                name: "10 GB Storage",
+                name: "Responsive design",
                 icon: CheckIcon,
             },
             {
-                name: "Basic Support",
+                name: "Contact form setup",
                 icon: CheckIcon,
             },
             {
-                name: "Community Access",
+                name: "Basic SEO structure",
                 icon: CheckIcon,
             },
             {
-                name: "Basic code review",
+                name: "Launch support",
                 icon: CheckIcon,
             },
         ],
         buttonText: "Get Started",
     },
     {
-        title: "Pro Plan",
+        title: "Business Build",
         price: 79,
         mostPopular: true,
         features: [
             {
-                name: "50 Projects",
+                name: "Multi-page website or app",
                 icon: CheckIcon,
             },
             {
-                name: "100 GB Storage",
+                name: "Custom UI sections",
                 icon: CheckIcon,
             },
             {
-                name: "Priority Support",
+                name: "Admin or dashboard features",
                 icon: CheckIcon,
             },
             {
-                name: "Team Collaboration",
+                name: "Integrations and forms",
                 icon: CheckIcon,
             },
             {
-                name: "Advanced Analytics",
+                name: "Analytics setup",
                 icon: CheckIcon,
             },
             {
-                name: "Premium Code Review",
+                name: "Priority launch support",
                 icon: CheckIcon,
             }
         ],
-        buttonText: "Upgrade Now",
+        buttonText: "Start Project",
     },
     {
-        title: "Enterprise Plan",
+        title: "Custom Build",
         price: 149,
         features: [
             {
-                name: "Unlimited Projects",
+                name: "Custom app or platform",
                 icon: CheckIcon,
             },
             {
-                name: "1 TB Storage",
+                name: "CRM, HRM, or SaaS features",
                 icon: CheckIcon,
             },
             {
-                name: "24/7 Dedicated Support",
+                name: "Automation and AI workflows",
                 icon: CheckIcon,
             },
             {
-                name: "Custom Integrations",
+                name: "Third-party integrations",
                 icon: CheckIcon,
             },
             {
-                name: "SLA Guarantee",
+                name: "Ongoing support plan",
                 icon: CheckIcon,
             }
         ],

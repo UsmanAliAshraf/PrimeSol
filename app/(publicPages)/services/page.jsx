@@ -12,10 +12,10 @@ const fadeUp = {
 };
 
 const processSteps = [
-  "Understand your business needs",
-  "Plan the right digital solution",
-  "Design and develop the system",
-  "Launch, support, and improve",
+  "Understand the problem",
+  "Shape the scope",
+  "Design and build",
+  "Launch and improve",
 ];
 
 export default function ServicesPage() {
@@ -40,9 +40,9 @@ export default function ServicesPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Digital Services Built to Help{" "}
-          <span className="bg-gradient-to-r from-[#923FEF] dark:from-[#C99DFF] to-[#C35DE8] dark:to-[#E1C9FF] bg-clip-text text-transparent">
-            Businesses Scale
+          Services for Teams That Need{" "}
+          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+            Things Built Properly
           </span>
         </motion.h1>
 
@@ -53,9 +53,8 @@ export default function ServicesPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          PrimeSol provides modern websites, web apps, mobile apps, SaaS
-          platforms, and AI automation systems designed to improve workflows and
-          accelerate business growth.
+          From websites and online stores to internal dashboards and automation,
+          we help you build the tools your customers and team actually need.
         </motion.p>
 
         <motion.div
@@ -65,14 +64,14 @@ export default function ServicesPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <Link href="/contact">
-            <button className="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
+          <Link href="/contact" scroll={false}>
+            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
               Get Started
             </button>
           </Link>
 
-          <Link href="/projects">
-            <button className="flex items-center gap-2 border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+          <Link href="/projects" scroll={false}>
+            <button className="flex items-center gap-2 border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
               View Projects
               <ArrowRight className="size-4" />
             </button>
@@ -84,15 +83,15 @@ export default function ServicesPage() {
       <section className="mt-28">
         <SectionTitle
           text1="What We Offer"
-          text2="Solutions for Modern Businesses"
-          text3="Choose the right service to build, automate, and scale your business."
+          text2="Choose What You Need Help With"
+          text3="Start with one focused service, or combine a few into a complete project."
         />
 
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-10 px-6 md:px-16 lg:px-24 xl:px-35">
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
-              className="p-7 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-86 transition hover:-translate-y-1 hover:border-purple-500/30"
+              className="p-7 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-86 transition hover:-translate-y-1 hover:border-sky-400/40"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -103,7 +102,7 @@ export default function ServicesPage() {
               }}
             >
               <service.icon
-                className="text-purple-500 size-9 mt-3"
+                className="text-sky-400 size-9 mt-3"
                 strokeWidth={1.3}
               />
 
@@ -121,8 +120,8 @@ export default function ServicesPage() {
       <section className="mt-28 px-6 md:px-16 lg:px-24 xl:px-35">
         <SectionTitle
           text1="Our Process"
-          text2="How We Build Your Solution"
-          text3="A simple and focused process from idea to launch."
+          text2="How We Work"
+          text3="A straightforward process that keeps the project clear from first call to launch."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
@@ -139,7 +138,7 @@ export default function ServicesPage() {
                 delay: index * 0.1,
               }}
             >
-              <div className="size-10 rounded-full bg-purple-600 text-white flex items-center justify-center font-semibold">
+              <div className="size-10 rounded-full bg-sky-500 text-white flex items-center justify-center font-semibold">
                 {index + 1}
               </div>
 
@@ -155,16 +154,16 @@ export default function ServicesPage() {
       <section className="mt-28 px-6 md:px-16 lg:px-24 xl:px-35">
         <SectionTitle
           text1="Why PrimeSol"
-          text2="Built With Quality, Speed, and Scalability"
-          text3="We focus on clean design, reliable development, and practical business outcomes."
+          text2="Why Teams Work With PrimeSol"
+          text3="We keep the work clear, practical, and focused on what the product needs to do."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
           {[
-            "Modern UI with responsive layouts",
-            "Scalable architecture for future growth",
-            "AI automation that reduces manual work",
-            "Business-focused delivery and support",
+            "Clean interfaces that work on every screen",
+            "Architecture that can grow without becoming messy",
+            "Automation that removes repetitive admin work",
+            "Clear delivery, support, and honest communication",
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -179,7 +178,7 @@ export default function ServicesPage() {
               }}
             >
               <CheckCircle2
-                className="size-7 text-purple-500 shrink-0"
+                className="size-7 text-sky-400 shrink-0"
                 strokeWidth={1.5}
               />
 
@@ -205,18 +204,18 @@ export default function ServicesPage() {
         </h3>
 
         <p className="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
-          Let’s build a modern digital solution that helps your business grow.
+          Let’s talk through what you need and turn it into a clear project plan.
         </p>
 
         <div className="flex items-center gap-4 mt-8">
-          <Link href="/contact">
-            <button className="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
+          <Link href="/contact" scroll={false}>
+            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
               Contact Us
             </button>
           </Link>
 
-          <Link href="/about">
-            <button className="border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+          <Link href="/about" scroll={false}>
+            <button className="border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
               About PrimeSol
             </button>
           </Link>

@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 const testimonials = [
   {
     review:
-      "Super clean and easy to use. These Tailwind + React components saved me hours of dev time and countless lines of extra code!",
+      "PrimeSol understood what we were trying to do and turned it into a clean site without making the process complicated.",
     name: "Richard Nelson",
     date: "12 Jan 2025",
     rating: 5,
@@ -15,7 +15,7 @@ const testimonials = [
   },
   {
     review:
-      "The design quality is top-notch. Perfect balance between simplicity and style. Highly recommend for any creative developer!",
+      "The team was easy to work with, quick on updates, and clear about what mattered for launch.",
     name: "Sophia Martinez",
     date: "15 Mar 2025",
     rating: 5,
@@ -36,8 +36,8 @@ export default function OurTestimonials() {
       </h3>
 
       <p className="mt-4 max-w-xl text-center text-sm leading-6 text-slate-400">
-        Our clients trust us for clean design, scalable development, and reliable
-        digital solutions that help their businesses grow.
+        Clients come to us when they need clear communication, dependable
+        delivery, and software that feels simple to use.
       </p>
 
       <div className="mt-16 w-full">

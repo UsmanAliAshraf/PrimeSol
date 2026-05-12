@@ -25,120 +25,120 @@ export const servicesData = [
     icon: Globe,
     title: "Custom Website Development",
     description:
-      "Modern, responsive, and high-performance websites built for your business.",
+      "Fast, polished websites that explain your offer clearly and turn visitors into leads.",
   },
   {
     icon: AppWindow,
     title: "Custom Web App Development",
     description:
-      "Scalable web applications with clean UI, secure backend, and smooth experience.",
+      "Browser-based tools built around your workflow, from client portals to internal systems.",
   },
   {
     icon: Smartphone,
     title: "Mobile App Development",
     description:
-      "User-friendly Android and iOS apps with modern design and reliable performance.",
+      "Mobile apps with simple flows, dependable performance, and room to grow after launch.",
   },
   {
     icon: Cpu,
     title: "SaaS App Development",
     description:
-      "Subscription-based SaaS platforms with dashboards, user management, and scalable features.",
+      "Subscription products with accounts, dashboards, billing flows, and practical admin tools.",
   },
   {
     icon: Bot,
     title: "AI Automation",
     description:
-      "AI-powered automations that reduce manual work and streamline business operations.",
+      "Automations that handle repetitive tasks, route information, and save your team time.",
   },
   {
     icon: BrainCircuit,
     title: "AI Agent Development",
     description:
-      "Custom AI agents for support, lead handling, booking, workflows, and business tasks.",
+      "Custom assistants for support, lead intake, booking, reporting, and repeatable workflows.",
   },
   {
     icon: Blocks,
     title: "WordPress Development",
     description:
-      "Professional WordPress websites with custom design, plugins, speed, and SEO setup.",
+      "WordPress sites that are easy to manage, quick to load, and set up properly from day one.",
   },
   {
     icon: Store,
     title: "Shopify Development",
     description:
-      "Custom Shopify stores with product setup, theme customization, checkout, and integrations.",
+      "Shopify storefronts with clean product pages, strong checkout flows, and useful integrations.",
   },
   {
     icon: Globe,
     title: "Wix Website Development",
     description:
-      "Clean Wix websites for businesses, portfolios, landing pages, and service-based brands.",
+      "Simple Wix sites for service brands, portfolios, landing pages, and quick launches.",
   },
   {
     icon: Users,
     title: "CRM Development",
     description:
-      "Custom CRM systems to manage leads, customers, sales pipelines, and business communication.",
+      "CRM systems that keep leads, customers, follow-ups, and team communication organized.",
   },
   {
     icon: BriefcaseBusiness,
     title: "HRM Development",
     description:
-      "HRM systems for employee management, attendance, payroll, leaves, and internal operations.",
+      "HR tools for employee records, attendance, leave requests, payroll, and approvals.",
   },
   {
     icon: LayoutDashboard,
     title: "Admin Dashboards",
     description:
-      "Powerful dashboards to manage users, data, analytics, operations, and workflows.",
+      "Dashboards that make data, tasks, users, reports, and operations easier to control.",
   },
   {
     icon: ShoppingCart,
     title: "E-commerce Development",
     description:
-      "Online stores with products, cart, checkout, payment integration, and order tracking.",
+      "Online stores with product catalogs, payments, order tracking, and a smoother buying path.",
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description:
-      "Modern and conversion-focused designs for websites, apps, dashboards, and SaaS products.",
+      "Interfaces that are easy to scan, easy to use, and shaped around real customer actions.",
   },
   {
     icon: Search,
     title: "SEO Optimization",
     description:
-      "Technical and on-page SEO improvements to help your website rank better.",
+      "Technical cleanup, content structure, and on-page improvements for better search visibility.",
   },
   {
     icon: Database,
     title: "Database Design",
     description:
-      "Secure and scalable database systems for websites, apps, SaaS, CRM, and HRM platforms.",
+      "Well-structured data models for apps, dashboards, portals, CRM, HRM, and SaaS products.",
   },
   {
     icon: Server,
     title: "Backend API Development",
     description:
-      "Secure backend systems and REST APIs built for performance and scalability.",
+      "Backends and APIs that connect your product, protect your data, and stay maintainable.",
   },
   {
     icon: Cloud,
     title: "Cloud Deployment",
     description:
-      "Production-ready deployment of websites, apps, APIs, and dashboards on cloud platforms.",
+      "Production setup for websites, apps, APIs, and dashboards on reliable cloud platforms.",
   },
   {
     icon: ShieldCheck,
     title: "Security & Authentication",
     description:
-      "Login systems, role-based access, secure authentication, and platform protection.",
+      "Login flows, permissions, account protection, and secure access for the right users.",
   },
   {
     icon: Wrench,
     title: "Maintenance & Support",
     description:
-      "Ongoing updates, bug fixes, speed optimization, and technical support after launch.",
+      "Ongoing fixes, improvements, performance checks, and support after your project goes live.",
   },
 ];

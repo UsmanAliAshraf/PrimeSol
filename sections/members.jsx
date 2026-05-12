@@ -10,7 +10,7 @@ export default function Members() {
   const data = [
     {
       review:
-        "Super clean and easy to use. These Tailwind + React components saved me hours of dev time and countless lines of extra code!",
+        "Works closely with clients to turn vague ideas into clear product plans and usable interfaces.",
       name: "Richard Nelson",
       about: "Founder & CEO",
       rating: 5,
@@ -19,7 +19,7 @@ export default function Members() {
     },
     {
       review:
-        "The design quality is top-notch. Perfect balance between simplicity and style. Highly recommend for any creative developer!",
+        "Focuses on clean user flows, responsive layouts, and details that make a product easier to use.",
       name: "Sophia Martinez",
       about: "Founder & CEO",
       rating: 5,
@@ -28,7 +28,7 @@ export default function Members() {
     },
     {
       review:
-        "Absolutely love the reusability of these components. My workflow feels 10x faster now with cleaner and more consistent layouts.",
+        "Builds reliable frontends, dashboards, and web app screens that stay maintainable after launch.",
       name: "Ethan Roberts",
       about: "Founder & CEO",
       rating: 5,
@@ -37,7 +37,7 @@ export default function Members() {
     },
     {
       review:
-        "Clean, elegant, and efficient. These components are a dream for any modern web developer who values beautiful code.",
+        "Handles backend logic, integrations, APIs, and the parts users do not see but rely on every day.",
       name: "Isabella Kim",
       about: "Founder & CEO",
       rating: 5,
@@ -46,7 +46,7 @@ export default function Members() {
     },
     {
       review:
-        "I've tried dozens of UI kits, but this one just feels right. Everything works seamlessly and looks incredibly polished.",
+        "Works on automation flows, AI-assisted processes, and ways to reduce repetitive admin work.",
       name: "Liam Johnson",
       about: "Founder & CEO",
       rating: 5,
@@ -55,12 +55,12 @@ export default function Members() {
     },
     {
       review:
-        "Brilliantly structured components with clean, modern styling. Makes development a joy and design updates super quick.",
+        "Keeps projects organized with clear communication, scope tracking, and launch support.",
       name: "Ava Patel",
       about: "Founder & CEO",
       rating: 5,
       image:
-        "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage1.png",
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&auto=format&fit=crop&q=60",
     },
   ];
 
@@ -69,7 +69,7 @@ export default function Members() {
       <SectionTitle
         text1="Our Team"
         text2="Meet the People Behind PrimeSol"
-        text3="A dedicated team focused on building modern web, app, and AI-powered business solutions."
+        text3="Designers, developers, and project minds working together to ship useful software."
       />
 
       <div className="mt-12 grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

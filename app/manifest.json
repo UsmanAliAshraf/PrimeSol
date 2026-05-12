@@ -1,6 +1,6 @@
 {
-    "name": "Landing",
-    "short_name": "Landing",
+    "name": "PrimeSol",
+    "short_name": "PrimeSol",
     "icons": [
         {
             "src": "/assets/web-app-manifest-192x192.png",

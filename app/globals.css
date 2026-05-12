@@ -6,8 +6,61 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+    scroll-behavior: smooth;
+}
+
+.page-transition {
+    animation: page-in 220ms ease-out both;
+}
+
+@keyframes page-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .page-transition {
+        animation: none;
+    }
+}
+
 body {
-    @apply bg-white text-slate-800 dark:bg-gray-950 dark:text-white text-sm font-poppins antialiased;
+    @apply text-sm font-poppins antialiased;
+    background-attachment: fixed;
+}
+
+/* Light: warm off-white / cream with soft stone & amber atmosphere */
+html:not(.dark) body {
+    @apply text-stone-800;
+    background-color: #f5f1e8;
+    background-image: radial-gradient(
+            ellipse 120% 80% at 50% -30%,
+            rgba(254, 243, 199, 0.55),
+            transparent 50%
+        ),
+        radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.09), transparent 42%),
+        radial-gradient(circle at 10% 90%, rgba(180, 83, 9, 0.06), transparent 38%),
+        radial-gradient(circle at 50% 100%, rgba(214, 211, 209, 0.35), transparent 45%);
+}
+
+/* Dark: deep slate + brand glows */
+html.dark body {
+    @apply bg-slate-950 text-slate-100;
+    background-image: radial-gradient(circle at 20% 10%, rgba(56, 189, 248, 0.12), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.14), transparent 28%),
+        radial-gradient(circle at 50% 100%, rgba(244, 114, 182, 0.12), transparent 30%);
 }
 
 button {
