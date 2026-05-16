@@ -76,10 +76,10 @@ export default function Footer() {
                 <Link href="https://twitter.com" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
                     <FaTwitter className="size-6" />
                 </Link>
-                <Link href="https://www.instagram.com" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
+                <Link href="https://www.instagram.com/primesol.official?igsh=aHowdHZqZ3M5dzBi&utm_source=qr" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
                     <FaInstagram className="size-6" />
                 </Link>
-                <Link href="https://www.linkedin.com/company/primesol-technologies/" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
+                <Link href="https://www.linkedin.com/company/primesol-technologies" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
                     <FaLinkedin className="size-6" />
                 </Link>
                 <Link href="https://github.com/usmanaliashraf" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
