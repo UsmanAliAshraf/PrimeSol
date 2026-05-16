@@ -11,7 +11,7 @@ export const FaqSection = () => {
     const [openIndex, setOpenIndex] = useState(null);
     return (
         <div className="relative max-w-2xl mx-auto flex flex-col items-center justify-center px-4 md:px-0">
-            <Image className="absolute -mb-120 -left-40 -z-10 pointer-events-none" src={theme === "dark" ? "/assets/color-splash.svg" : "/assets/color-splash-light.svg"} alt="color-splash" width={1000} height={1000} priority fetchPriority="high" />
+            <Image className="absolute -mb-120 -left-40 -z-10 pointer-events-none" src={theme === "dark" ? "/assets/color-splash.svg" : "/assets/color-splash-light.svg"} alt="color-splash" width={1000} height={1000} />
             <SectionTitle text1="FAQs" text2="Frequently asked questions" text3="A few quick answers before we talk about your project." />
             <div className="mt-8">
                 {faqsData.map((faq, index) => (

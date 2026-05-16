@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
+import Image from "next/image";
 import {
   ArrowRight,
   ExternalLink,
@@ -411,9 +412,12 @@ export default function ProjectsPage() {
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={720}
+                  height={512}
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   onError={(event) => {
                     event.currentTarget.src = "/assets/parallel.png";
                   }}

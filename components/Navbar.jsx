@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link href="/" scroll={false} className="flex shrink-0 items-center gap-2.5 md:gap-3">
                 <Image
                     className="size-12 shrink-0 object-contain md:size-14 dark:hidden"
-                    src="/assets/primesol-icon-light-mode.svg"
+                    src="/assets/web-app-manifest-192x192.png"
                     alt="PrimeSol"
                     width={56}
                     height={56}
@@ -31,12 +31,10 @@ export default function Navbar() {
                 />
                 <Image
                     className="hidden size-12 shrink-0 object-contain md:size-14 dark:block"
-                    src="/assets/primesol-icon-dark-mode.svg"
+                    src="/assets/web-app-manifest-192x192.png"
                     alt="PrimeSol"
                     width={56}
                     height={56}
-                    priority
-                    fetchPriority="high"
                 />
                 <span className="text-lg font-semibold tracking-tight text-stone-900 dark:text-white md:text-xl">
                     PrimeSol

@@ -18,8 +18,6 @@ export default function Footer() {
                 alt=""
                 width={930}
                 height={340}
-                priority
-                fetchPriority="high"
                 aria-hidden
             />
             <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-200 dark:border-slate-700 pb-6">
@@ -27,21 +25,17 @@ export default function Footer() {
                     <Link href="/" scroll={false} className="inline-flex items-center gap-3">
                         <Image
                             className="size-12 shrink-0 object-contain md:size-14 dark:hidden"
-                            src="/assets/primesol-icon-light-mode.svg"
+                            src="/assets/web-app-manifest-192x192.png"
                             alt="PrimeSol"
                             width={56}
                             height={56}
-                            priority
-                            fetchPriority="high"
                         />
                         <Image
                             className="hidden size-12 shrink-0 object-contain md:size-14 dark:block"
-                            src="/assets/primesol-icon-dark-mode.svg"
+                            src="/assets/web-app-manifest-192x192.png"
                             alt="PrimeSol"
                             width={56}
                             height={56}
-                            priority
-                            fetchPriority="high"
                         />
                         <span className="text-xl font-semibold tracking-tight text-stone-900 dark:text-white md:text-2xl">
                             PrimeSol
@@ -82,10 +76,10 @@ export default function Footer() {
                 <Link href="https://www.instagram.com" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
                     <FaInstagram className="size-6" />
                 </Link>
-                <Link href="https://www.linkedin.com" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
+                <Link href="https://www.linkedin.com/company/primesol-technologies/" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
                     <FaLinkedin className="size-6" />
                 </Link>
-                <Link href="https://github.com" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
+                <Link href="https://github.com/usmanaliashraf" target="_blank" className="text-slate-600 hover:text-sky-500 dark:text-slate-300 dark:hover:text-sky-400">
                     <FaGithub className="size-6" />
                 </Link>
             </div>
