@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { ExternalLinkIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const steps = [
@@ -73,10 +74,13 @@ export default function WorkflowSteps() {
               mass: 1,
             }}
           >
-            <img
+            <Image
               src={step.image}
-              alt="step"
-              className="flex-1 h-auto w-full max-w-sm rounded-2xl"
+              alt={step.title}
+              width={560}
+              height={360}
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="h-auto w-full max-w-sm flex-1 rounded-2xl object-cover"
             />
             <div className="flex-1 flex flex-col gap-6 md:px-6 max-w-md">
               <h3 className="text-2xl font-medium text-white">{step.title}</h3>

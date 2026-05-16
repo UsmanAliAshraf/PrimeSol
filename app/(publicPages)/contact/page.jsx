@@ -13,6 +13,8 @@ import {
 import Link from "next/link";
 import SectionTitle from "@/components/SectionTitle";
 
+const CONTACT_EMAIL = "hello@primesol.co";
+
 const fadeUp = {
   hidden: { y: 80, opacity: 0 },
   visible: { y: 0, opacity: 1 },
@@ -22,7 +24,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "info@primesol.com",
+    value: CONTACT_EMAIL,
   },
   {
     icon: Phone,
@@ -69,7 +71,7 @@ export default function ContactPage() {
       ].join("\n"),
     );
 
-    window.location.href = `mailto:info@primesol.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
   return (

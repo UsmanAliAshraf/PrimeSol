@@ -9,6 +9,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-
 
 export default function Footer() {
     const { theme } = useThemeContext();
+    const email = "hello@primesol.co";
 
     return (
         <footer className="relative px-6 md:px-16 lg:px-24 xl:px-32 mt-40 w-full dark:text-slate-50">
@@ -25,14 +26,14 @@ export default function Footer() {
                     <Link href="/" scroll={false} className="inline-flex items-center gap-3">
                         <Image
                             className="size-12 shrink-0 object-contain md:size-14 dark:hidden"
-                            src="/assets/web-app-manifest-192x192.png"
+                            src="/assets/primesol-icon-light-mode.svg"
                             alt="PrimeSol"
                             width={56}
                             height={56}
                         />
                         <Image
                             className="hidden size-12 shrink-0 object-contain md:size-14 dark:block"
-                            src="/assets/web-app-manifest-192x192.png"
+                            src="/assets/primesol-icon-dark-mode.svg"
                             alt="PrimeSol"
                             width={56}
                             height={56}
@@ -60,7 +61,9 @@ export default function Footer() {
                         <h2 className="font-semibold mb-5">Get in touch</h2>
                         <div className="space-y-2">
                             <p>+923198622852</p>
-                            <p>info@primesol.com</p>
+                            <Link href={`mailto:${email}`} className="block hover:text-sky-500 transition">
+                                {email}
+                            </Link>
                         </div>
                     </div>
                 </div>
