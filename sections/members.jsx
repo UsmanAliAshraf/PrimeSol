@@ -2,115 +2,90 @@
 
 import SectionTitle from "@/components/SectionTitle";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+
+const team = [
+  {
+    name: "Usman Ali Ashraf",
+    role: "Founder",
+    image: "/assets/usman.png",
+    summary:
+      "Leads PrimeSol's product direction, client strategy, and the standard for useful, polished software.",
+  },
+  {
+    name: "Basit Mehmood",
+    role: "CEO",
+    image: "/assets/basit.png",
+    summary:
+      "Guides operations, delivery planning, and the client experience from first conversation to launch.",
+  },
+  {
+    name: "Ali",
+    role: "Website Developer",
+    image: "/assets/abc.png",
+    summary:
+      "Builds responsive websites and clean web interfaces with a focus on speed, clarity, and detail.",
+  },
+  {
+    name: "Arslan Ashraf",
+    role: "Business Developer",
+    image: "/assets/arslan.jpeg",
+    summary:
+      "Develops partnerships, understands business needs, and helps shape opportunities into clear plans.",
+  },
+];
 
 export default function Members() {
-  const ref = useRef([]);
-
-  const data = [
-    {
-      review:
-        "Works closely with clients to turn vague ideas into clear product plans and usable interfaces.",
-      name: "Richard Nelson",
-      about: "Founder & CEO",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
-    },
-    {
-      review:
-        "Focuses on clean user flows, responsive layouts, and details that make a product easier to use.",
-      name: "Sophia Martinez",
-      about: "Founder & CEO",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
-    },
-    {
-      review:
-        "Builds reliable frontends, dashboards, and web app screens that stay maintainable after launch.",
-      name: "Ethan Roberts",
-      about: "Founder & CEO",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60",
-    },
-    {
-      review:
-        "Handles backend logic, integrations, APIs, and the parts users do not see but rely on every day.",
-      name: "Isabella Kim",
-      about: "Founder & CEO",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60",
-    },
-    {
-      review:
-        "Works on automation flows, AI-assisted processes, and ways to reduce repetitive admin work.",
-      name: "Liam Johnson",
-      about: "Founder & CEO",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop",
-    },
-    {
-      review:
-        "Keeps projects organized with clear communication, scope tracking, and launch support.",
-      name: "Ava Patel",
-      about: "Founder & CEO",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&auto=format&fit=crop&q=60",
-    },
-  ];
-
   return (
-    <section className="mt-32 flex flex-col items-center px-6">
+    <section className="mt-32 px-6 md:px-16 lg:px-24 xl:px-35">
       <SectionTitle
         text1="Our Team"
         text2="Meet the People Behind PrimeSol"
-        text3="Designers, developers, and project minds working together to ship useful software."
+        text3="A focused team combining business thinking, product direction, and hands-on web development."
       />
 
-      <div className="mt-12 grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {data.map((item, index) => (
-          <motion.div
-            key={index}
-            className="w-full space-y-5 rounded-2xl border border-slate-700 bg-slate-900/60 p-6 shadow-[0_0_35px_rgba(147,51,234,0.10)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-slate-600 hover:bg-slate-900/80"
-            initial={{ y: 150, opacity: 0 }}
-            ref={(el) => (ref.current[index] = el)}
+      <div className="mx-auto mt-14 grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {team.map((member, index) => (
+          <motion.article
+            key={member.name}
+            className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-sky-300 dark:border-slate-800 dark:bg-slate-900/60 dark:shadow-[0_0_45px_rgba(56,189,248,0.08)] dark:hover:border-sky-500/50"
+            initial={{ y: 90, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{
-              delay: index * 0.15,
+              delay: index * 0.1,
               type: "spring",
-              stiffness: 320,
-              damping: 70,
+              stiffness: 280,
+              damping: 60,
               mass: 1,
             }}
-            onAnimationComplete={() => {
-              const card = ref.current[index];
-              if (card) {
-                card.classList.add("transition", "duration-300");
-              }
-            }}
           >
-            <div className="flex items-center justify-between">
-              <p className="font-medium text-white">{item.about}</p>
-
+            <div className="relative aspect-[4/5] min-h-88 overflow-hidden bg-slate-100 dark:bg-slate-950">
               <img
-                className="size-10 rounded-full border border-slate-600 object-cover"
-                src={item.image}
-                alt={item.name}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                src={member.image}
+                alt={`${member.name}, ${member.role}`}
               />
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="w-max rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
+                  {member.role}
+                </p>
+              </div>
             </div>
 
-            <p className="line-clamp-3 text-sm/6 text-slate-300">
-              “{item.review}”
-            </p>
+            <div className="space-y-4 p-6">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
+                  {member.name}
+                </h3>
+                <div className="mt-3 h-px w-16 bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400" />
+              </div>
 
-            <p className="font-medium text-slate-400">- {item.name}</p>
-          </motion.div>
+              <p className="text-sm/7 text-slate-600 dark:text-slate-300">
+                {member.summary}
+              </p>
+            </div>
+          </motion.article>
         ))}
       </div>
     </section>
