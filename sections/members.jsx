@@ -8,6 +8,7 @@ const team = [
     name: "Usman Ali Ashraf",
     role: "Founder",
     image: "/assets/usman.png",
+    imageClassName: "scale-100 group-hover:scale-[1.03]",
     summary:
       "Leads PrimeSol's product direction, client strategy, and the standard for useful, polished software.",
   },
@@ -15,13 +16,15 @@ const team = [
     name: "Basit Mehmood",
     role: "CEO",
     image: "/assets/basit.png",
+    imageClassName: "scale-100 group-hover:scale-[1.03]",
     summary:
       "Guides operations, delivery planning, and the client experience from first conversation to launch.",
   },
   {
-    name: "Ali",
+    name: "Ali Ahmer",
     role: "Website Developer",
     image: "/assets/abc.png",
+    imageClassName: "scale-100 group-hover:scale-[1.03]",
     summary:
       "Builds responsive websites and clean web interfaces with a focus on speed, clarity, and detail.",
   },
@@ -29,6 +32,7 @@ const team = [
     name: "Arslan Ashraf",
     role: "Business Developer",
     image: "/assets/arslan.jpeg",
+    imageClassName: "scale-90 group-hover:scale-95",
     summary:
       "Develops partnerships, understands business needs, and helps shape opportunities into clear plans.",
   },
@@ -59,9 +63,9 @@ export default function Members() {
               mass: 1,
             }}
           >
-            <div className="relative aspect-[4/5] min-h-88 overflow-hidden bg-slate-100 dark:bg-slate-950">
+            <div className="relative aspect-[4/5] min-h-88 overflow-hidden bg-[#111111]">
               <img
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                className={`h-full w-full object-contain object-center transition duration-500 ${member.imageClassName}`}
                 src={member.image}
                 alt={`${member.name}, ${member.role}`}
               />
