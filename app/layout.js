@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
     title: "PrimeSol - Websites, Apps & Automation",
     description:
-        "PrimeSol helps businesses build clear websites, useful apps, internal dashboards, online stores, and automation systems.",
+        "PrimeSol helps businesses go digital with AI-powered websites, apps, dashboards, agents, and automation systems.",
     icons: {
         icon: [
             { url: "/assets/primesol-icon-light-mode.svg", type: "image/svg+xml" },

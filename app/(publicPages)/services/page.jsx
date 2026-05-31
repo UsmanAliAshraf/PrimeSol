@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { servicesData } from "@/data/servicesData";
+import ClientFeedback from "@/sections/ClientFeedback";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
@@ -40,9 +41,9 @@ export default function ServicesPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Services for Teams That Need{" "}
+          AI-First Services for Businesses That Need{" "}
           <span className="brand-gradient-text">
-            Things Built Properly
+            Practical Results
           </span>
         </motion.h1>
 
@@ -53,8 +54,9 @@ export default function ServicesPage() {
           animate="visible"
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          From websites and online stores to internal dashboards and automation,
-          we help you build the tools your customers and team actually need.
+          We build websites, apps, dashboards, automations, and AI agents that
+          help businesses go digital, reduce manual work, and operate more
+          efficiently.
         </motion.p>
 
         <motion.div
@@ -83,8 +85,8 @@ export default function ServicesPage() {
       <section className="mt-28">
         <SectionTitle
           text1="What We Offer"
-          text2="Choose What You Need Help With"
-          text3="Start with one focused service, or combine a few into a complete project."
+          text2="Choose the Right Digital Solution"
+          text3="Start with one focused service, or combine software development and AI automation into a complete business system."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:px-16 lg:grid-cols-3 lg:px-24 xl:px-35">
@@ -120,7 +122,7 @@ export default function ServicesPage() {
         <SectionTitle
           text1="Our Process"
           text2="How We Work"
-          text3="A straightforward process that keeps the project clear from first call to launch."
+          text3="A straightforward process that keeps your website, app, dashboard, or AI automation project clear from first call to launch."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
@@ -161,7 +163,7 @@ export default function ServicesPage() {
           {[
             "Clean interfaces that work on every screen",
             "Architecture that can grow without becoming messy",
-            "Automation that removes repetitive admin work",
+            "AI automation that removes repetitive admin work",
             "Clear delivery, support, and honest communication",
           ].map((item, index) => (
             <motion.div
@@ -188,6 +190,8 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      <ClientFeedback />
 
       {/* CTA */}
       <motion.div

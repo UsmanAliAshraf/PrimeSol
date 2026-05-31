@@ -25,120 +25,120 @@ export const servicesData = [
     icon: Globe,
     title: "Custom Website Development",
     description:
-      "Fast, polished websites that explain your offer clearly and turn visitors into leads.",
+      "Conversion-focused websites that help businesses build trust, explain their offer clearly, and turn visitors into leads.",
   },
   {
     icon: AppWindow,
     title: "Custom Web App Development",
     description:
-      "Browser-based tools built around your workflow, from client portals to internal systems.",
+      "Business tools, dashboards, and portals built around real workflows so teams can manage operations more efficiently.",
   },
   {
     icon: Smartphone,
     title: "Mobile App Development",
     description:
-      "Mobile apps with simple flows, dependable performance, and room to grow after launch.",
+      "User-friendly mobile apps for Android and iOS that help businesses connect with customers, teams, or internal users.",
   },
   {
     icon: Cpu,
     title: "SaaS App Development",
     description:
-      "Subscription products with accounts, dashboards, billing flows, and practical admin tools.",
+      "Scalable SaaS platforms with dashboards, authentication, billing flows, admin tools, and user management.",
   },
   {
     icon: Bot,
     title: "AI Automation",
     description:
-      "Automations that handle repetitive tasks, route information, and save your team time.",
+      "AI-powered workflows that reduce repetitive tasks such as lead handling, reporting, reminders, support, and internal operations.",
   },
   {
     icon: BrainCircuit,
     title: "AI Agent Development",
     description:
-      "Custom assistants for support, lead intake, booking, reporting, and repeatable workflows.",
+      "Custom AI agents for support, lead qualification, booking, reporting, document handling, and repeatable business workflows.",
   },
   {
     icon: Blocks,
     title: "WordPress Development",
     description:
-      "WordPress sites that are easy to manage, quick to load, and set up properly from day one.",
+      "Manageable WordPress websites for service businesses that need clear pages, lead capture, and simple content updates.",
   },
   {
     icon: Store,
     title: "Shopify Development",
     description:
-      "Shopify storefronts with clean product pages, strong checkout flows, and useful integrations.",
+      "Shopify storefronts with clean product pages, stronger checkout flows, and integrations that support online sales operations.",
   },
   {
     icon: Globe,
     title: "Wix Website Development",
     description:
-      "Simple Wix sites for service brands, portfolios, landing pages, and quick launches.",
+      "Quick-launch Wix websites for small businesses that need a professional digital presence without a complex setup.",
   },
   {
     icon: Users,
     title: "CRM Development",
     description:
-      "CRM systems that keep leads, customers, follow-ups, and team communication organized.",
+      "CRM systems that organize leads, customers, follow-ups, and team communication so sales work is easier to track.",
   },
   {
     icon: BriefcaseBusiness,
     title: "HRM Development",
     description:
-      "HR tools for employee records, attendance, leave requests, payroll, and approvals.",
+      "HR tools for employee records, attendance, leave requests, payroll, and approvals that reduce admin workload.",
   },
   {
     icon: LayoutDashboard,
     title: "Admin Dashboards",
     description:
-      "Dashboards that make data, tasks, users, reports, and operations easier to control.",
+      "Dashboards that turn tasks, users, reports, and operational data into clear views for better decisions.",
   },
   {
     icon: ShoppingCart,
     title: "E-commerce Development",
     description:
-      "Online stores with product catalogs, payments, order tracking, and a smoother buying path.",
+      "Online stores with product catalogs, payments, order tracking, and smoother buying paths that support revenue growth.",
   },
   {
     icon: Palette,
     title: "UI/UX Design",
     description:
-      "Interfaces that are easy to scan, easy to use, and shaped around real customer actions.",
+      "Interfaces shaped around real customer actions so websites, apps, and dashboards feel clear and easy to use.",
   },
   {
     icon: Search,
     title: "SEO Optimization",
     description:
-      "Technical cleanup, content structure, and on-page improvements for better search visibility.",
+      "Technical cleanup, content structure, and on-page improvements that help customers find your business online.",
   },
   {
     icon: Database,
     title: "Database Design",
     description:
-      "Well-structured data models for apps, dashboards, portals, CRM, HRM, and SaaS products.",
+      "Well-structured data models for apps, dashboards, portals, CRM, HRM, and SaaS products that need reliable records.",
   },
   {
     icon: Server,
     title: "Backend API Development",
     description:
-      "Backends and APIs that connect your product, protect your data, and stay maintainable.",
+      "Backends and APIs that connect your product, protect your data, and keep business systems maintainable.",
   },
   {
     icon: Cloud,
     title: "Cloud Deployment",
     description:
-      "Production setup for websites, apps, APIs, and dashboards on reliable cloud platforms.",
+      "Production setup for websites, apps, APIs, automations, and dashboards on reliable cloud platforms.",
   },
   {
     icon: ShieldCheck,
     title: "Security & Authentication",
     description:
-      "Login flows, permissions, account protection, and secure access for the right users.",
+      "Login flows, permissions, account protection, and secure access so the right users reach the right tools.",
   },
   {
     icon: Wrench,
     title: "Maintenance & Support",
     description:
-      "Ongoing fixes, improvements, performance checks, and support after your project goes live.",
+      "Ongoing fixes, improvements, performance checks, and support so your software keeps working after launch.",
   },
 ];

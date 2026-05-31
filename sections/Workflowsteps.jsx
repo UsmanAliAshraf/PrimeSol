@@ -1,32 +1,28 @@
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
-import { ExternalLinkIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const steps = [
   {
     id: 1,
-    title: " The Ringer",
+    title: "Conversion-Focused Business Website",
     description:
-      "A content-heavy publishing experience with strong navigation, fast browsing, and room for articles, shows, and media.",
-    link: "https://www.theringer.com/",
+      "A polished website experience designed to explain the offer clearly, build trust, and turn visitors into qualified leads.",
     image: "/assets/ringer.png",
   },
   {
     id: 2,
-    title: "UseParallel",
+    title: "Operations Web App",
     description:
-      "A workflow product focused on speed, clarity, and helping teams move through complex work with less friction.",
-    link: "https://www.useparallel.com/",
+      "A workflow product concept for teams that need dashboards, task visibility, customer records, and smoother internal operations.",
     image: "/assets/parallel.png",
   },
   {
     id: 3,
-    title: "Taxif",
+    title: "Mobile Booking Experience",
     description:
-      "A ride-booking app concept with clean trip flows, booking details, and simple mobile-first navigation.",
-    link: "https://apps.apple.com/",
+      "A mobile-first product flow shaped around quick booking, simple navigation, and easy access for customers or internal users.",
     image: "/assets/taxi.png",
   },
 ];
@@ -35,8 +31,9 @@ export default function WorkflowSteps() {
   return (
     <section className="mt-32 relative">
       <SectionTitle
-          tag="Our Projects"
-          description="A quick look at the kind of interfaces and product flows we can plan, design, and build."
+          text1="Featured Projects"
+          text2="A Preview of What We Build"
+          text3="A quick look at the kind of websites, apps, and product flows PrimeSol can plan, design, and build."
       />
 
       <motion.div
@@ -87,10 +84,9 @@ export default function WorkflowSteps() {
               <p className="line-clamp-3 pb-2 text-sm/6 text-[#28304A]">
                 {step.description}
               </p>
-              <a href={step.link} className="flex items-center gap-2 font-semibold text-[#5B22E8]">
-                Learn More
-                <ExternalLinkIcon className="size-4" />
-              </a>
+              <p className="text-sm font-semibold text-[#5B22E8]">
+                Preview project type
+              </p>
             </div>
           </motion.div>
         ))}
