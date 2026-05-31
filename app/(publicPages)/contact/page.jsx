@@ -77,9 +77,9 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative overflow-hidden px-4 pt-44 pb-24 text-center bg-[url('/assets/light-hero-gradient.svg')] dark:bg-[url('/assets/dark-hero-gradient.svg')] bg-no-repeat bg-cover">
+      <div className="brand-hero relative overflow-hidden px-4 pt-44 pb-24 text-center">
         <motion.p
-          className="mx-auto w-max rounded-full border border-slate-300 bg-white/70 px-6 py-2 text-xs dark:border-slate-600 dark:bg-slate-600/20"
+          className="brand-pill mx-auto w-max rounded-full px-6 py-2 text-xs"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -89,20 +89,20 @@ export default function ContactPage() {
         </motion.p>
 
         <motion.h1
-          className="mx-auto mt-4 max-w-5xl text-5xl/15 font-semibold md:text-[64px]/19"
+          className="mx-auto mt-4 max-w-5xl text-4xl/12 font-semibold text-[#080B2B] md:text-[64px]/19"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           Let’s Talk About Your Next{" "}
-          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="brand-gradient-text">
             Project
           </span>
         </motion.h1>
 
         <motion.p
-          className="mx-auto mt-3 max-w-2xl text-base dark:text-slate-300"
+          className="mx-auto mt-3 max-w-2xl text-base text-[#28304A]"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -119,19 +119,19 @@ export default function ContactPage() {
           {contactInfo.map((item, index) => (
             <motion.div
               key={index}
-              className="rounded-2xl border border-slate-200 bg-white p-6 text-center transition hover:-translate-y-1 dark:border-slate-800 dark:bg-slate-900/60"
+              className="brand-card brand-card-hover rounded-2xl p-6 text-center"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-sky-400/10 text-sky-400">
+              <div className="icon-gradient mx-auto flex size-12 items-center justify-center rounded-xl">
                 <item.icon className="size-6" strokeWidth={1.5} />
               </div>
 
               <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
-              <p className="mt-2 text-sm text-slate-500 dark:text-slate-300">
+              <p className="mt-2 text-sm text-[#28304A]">
                 {item.value}
               </p>
             </motion.div>
@@ -150,14 +150,14 @@ export default function ContactPage() {
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Left Info */}
           <motion.div
-            className="rounded-3xl border border-slate-200 bg-white p-8 dark:border-slate-800 dark:bg-slate-900/60"
+            className="brand-card rounded-3xl p-8"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex size-14 items-center justify-center rounded-2xl bg-sky-500 text-white">
+            <div className="btn-primary flex size-14 items-center justify-center rounded-2xl">
               <MessageSquare className="size-7" strokeWidth={1.5} />
             </div>
 
@@ -165,7 +165,7 @@ export default function ContactPage() {
               Not sure where to start?
             </h3>
 
-            <p className="mt-4 text-sm/7 text-slate-600 dark:text-slate-300">
+            <p className="mt-4 text-sm/7 text-[#28304A]">
               Whether you need a website, app, automation, CRM, HRM, or online
               store, we can help you understand the scope and choose a sensible
               way to build it.
@@ -180,21 +180,21 @@ export default function ContactPage() {
               ].map((point, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle2
-                    className="size-5 text-sky-400"
+                    className="size-5 text-[#5B22E8]"
                     strokeWidth={1.5}
                   />
-                  <p className="text-sm text-slate-600 dark:text-slate-300">
+                  <p className="text-sm text-[#28304A]">
                     {point}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-800/30">
-              <p className="text-sm text-slate-500 dark:text-slate-300">
+            <div className="mt-8 rounded-2xl border border-[rgba(91,34,232,0.14)] bg-[#F3ECFF] p-5">
+              <p className="text-sm text-[#28304A]">
                 Average response time
               </p>
-              <h4 className="mt-1 text-2xl font-semibold text-sky-400">
+              <h4 className="brand-gradient-text mt-1 text-2xl font-semibold">
                 Within 24 Hours
               </h4>
             </div>
@@ -203,7 +203,7 @@ export default function ContactPage() {
           {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_0_40px_rgba(56,189,248,0.10)] dark:border-slate-800 dark:bg-slate-900/60"
+            className="brand-card rounded-3xl p-8"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -217,7 +217,7 @@ export default function ContactPage() {
                   type="text"
                   name="name"
                   placeholder="Your name"
-                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
+                  className="mt-2 h-12 w-full rounded-xl border border-[rgba(91,34,232,0.18)] bg-white px-4 text-sm text-[#11142D] outline-none transition focus:border-[#8B5CF6] focus:shadow-[0_0_0_4px_rgba(139,92,246,0.12)]"
                 />
               </div>
 
@@ -227,7 +227,7 @@ export default function ContactPage() {
                   type="email"
                   name="email"
                   placeholder="you@example.com"
-                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
+                  className="mt-2 h-12 w-full rounded-xl border border-[rgba(91,34,232,0.18)] bg-white px-4 text-sm text-[#11142D] outline-none transition focus:border-[#8B5CF6] focus:shadow-[0_0_0_4px_rgba(139,92,246,0.12)]"
                 />
               </div>
 
@@ -237,13 +237,13 @@ export default function ContactPage() {
                   type="text"
                   name="phone"
                   placeholder="+923198622852"
-                  className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
+                  className="mt-2 h-12 w-full rounded-xl border border-[rgba(91,34,232,0.18)] bg-white px-4 text-sm text-[#11142D] outline-none transition focus:border-[#8B5CF6] focus:shadow-[0_0_0_4px_rgba(139,92,246,0.12)]"
                 />
               </div>
 
               <div>
                 <label className="text-sm font-medium">Service Needed</label>
-                <select name="service" className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40">
+                <select name="service" className="mt-2 h-12 w-full rounded-xl border border-[rgba(91,34,232,0.18)] bg-white px-4 text-sm text-[#11142D] outline-none transition focus:border-[#8B5CF6] focus:shadow-[0_0_0_4px_rgba(139,92,246,0.12)]">
                   <option>Select service</option>
                   {services.map((service, index) => (
                     <option key={index}>{service}</option>
@@ -254,7 +254,7 @@ export default function ContactPage() {
 
             <div className="mt-5">
               <label className="text-sm font-medium">Project Budget</label>
-              <select name="budget" className="mt-2 h-12 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40">
+              <select name="budget" className="mt-2 h-12 w-full rounded-xl border border-[rgba(91,34,232,0.18)] bg-white px-4 text-sm text-[#11142D] outline-none transition focus:border-[#8B5CF6] focus:shadow-[0_0_0_4px_rgba(139,92,246,0.12)]">
                 <option>Select budget range</option>
                 <option>$500 - $1,000</option>
                 <option>$1,000 - $3,000</option>
@@ -269,13 +269,13 @@ export default function ContactPage() {
                 rows={6}
                 name="details"
                 placeholder="Tell us about your project..."
-                className="mt-2 w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-sky-400 dark:border-slate-800 dark:bg-slate-800/40"
+                className="mt-2 w-full resize-none rounded-xl border border-[rgba(91,34,232,0.18)] bg-white px-4 py-3 text-sm text-[#11142D] outline-none transition focus:border-[#8B5CF6] focus:shadow-[0_0_0_4px_rgba(139,92,246,0.12)]"
               />
             </div>
 
             <button
               type="submit"
-              className="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-6 text-white transition hover:bg-sky-600"
+              className="btn-primary mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-xl px-6 font-semibold transition"
             >
               Send Message
               <Send className="size-4" />
@@ -286,7 +286,7 @@ export default function ContactPage() {
 
       {/* CTA */}
       <motion.div
-        className="mt-20 flex flex-col items-center justify-center px-6 pb-24 text-center"
+        className="soft-section mx-6 mt-24 flex flex-col items-center justify-center rounded-[2rem] px-6 py-16 text-center md:mx-16 lg:mx-24 xl:mx-35"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -297,19 +297,19 @@ export default function ContactPage() {
           Ready to Start Your Project?
         </h3>
 
-        <p className="mx-auto max-w-xl text-slate-600 dark:text-slate-200">
+        <p className="mx-auto max-w-xl text-[#28304A]">
           Let’s discuss your idea and decide what should happen next.
         </p>
 
         <div className="mt-8 flex items-center gap-4">
           <Link href="/projects" scroll={false}>
-            <button className="h-11 rounded-md bg-sky-500 px-6 text-white transition hover:bg-sky-600">
+            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
               View Projects
             </button>
           </Link>
 
           <Link href="/services" scroll={false}>
-            <button className="h-11 rounded-md border border-sky-500/40 px-6 text-slate-600 transition dark:text-white">
+            <button className="btn-secondary h-11 rounded-xl px-6 font-semibold transition">
               View Services
             </button>
           </Link>

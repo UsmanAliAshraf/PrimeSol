@@ -27,15 +27,15 @@ const testimonials = [
 export default function OurTestimonials() {
   return (
     <section className="relative mx-auto mt-32 flex max-w-6xl flex-col items-center overflow-hidden px-4 py-20">
-      <div className="mb-5 rounded-full border border-violet-400/30 bg-violet-500/10 px-8 py-2 text-sm font-medium text-violet-300">
+      <div className="brand-pill mb-5 rounded-full px-8 py-2 text-sm font-semibold">
         Testimonials
       </div>
 
-      <h3 className="text-center text-3xl font-bold text-white md:text-4xl">
+      <h3 className="text-center text-3xl font-bold text-[#080B2B] md:text-4xl">
         What Our Clients Say
       </h3>
 
-      <p className="mt-4 max-w-xl text-center text-sm leading-6 text-slate-400">
+      <p className="mt-4 max-w-xl text-center text-sm leading-6 text-[#28304A]">
         Clients come to us when they need clear communication, dependable
         delivery, and software that feels simple to use.
       </p>
@@ -45,7 +45,7 @@ export default function OurTestimonials() {
           pauseOnHover
           gradient
           autoFill
-          gradientColor="#020617"
+          gradientColor="#f3ecff"
           gradientWidth={80}
           speed={30}
         >
@@ -60,7 +60,7 @@ export default function OurTestimonials() {
           direction="right"
           gradient
           autoFill
-          gradientColor="#020617"
+          gradientColor="#f3ecff"
           gradientWidth={80}
           speed={30}
         >
@@ -75,7 +75,7 @@ export default function OurTestimonials() {
 
 function TestimonialCard({ item }) {
   return (
-    <div className="mx-3 w-[22rem] max-w-sm space-y-5 rounded-2xl border border-violet-400/20 bg-slate-900/70 p-5 text-slate-300 shadow-[0_0_35px_rgba(168,85,247,0.12)] backdrop-blur">
+    <div className="brand-card brand-card-hover mx-3 w-[22rem] max-w-sm space-y-5 rounded-2xl p-5">
       <div className="flex items-center justify-between">
         <div className="flex gap-1">
           {Array.from({ length: item.rating }).map((_, index) => (
@@ -86,10 +86,10 @@ function TestimonialCard({ item }) {
           ))}
         </div>
 
-        <p className="text-sm text-slate-500">{item.date}</p>
+        <p className="text-sm text-[#5B22E8]">{item.date}</p>
       </div>
 
-      <p className="text-sm leading-6 text-slate-400">“{item.review}”</p>
+      <p className="text-sm leading-6 text-[#28304A]">“{item.review}”</p>
 
       <div className="flex items-center gap-3 pt-2">
         <img
@@ -100,7 +100,7 @@ function TestimonialCard({ item }) {
           className="size-10 rounded-full border border-violet-400/30 object-cover"
         />
 
-        <p className="font-semibold text-white">{item.name}</p>
+        <p className="font-semibold text-[#080B2B]">{item.name}</p>
       </div>
     </div>
   );

@@ -46,16 +46,16 @@ export default function WorkflowSteps() {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <div className="flex-col items-center hidden md:flex absolute left-1/2 -translate-x-1/2">
-          <p className="flex items-center justify-center font-medium my-10 aspect-square bg-black/15 p-2 rounded-full">
+        <div className="absolute left-1/2 hidden -translate-x-1/2 flex-col items-center md:flex">
+          <p className="brand-pill my-10 flex aspect-square items-center justify-center rounded-full p-2 font-medium">
             01
           </p>
-          <div className="h-72 w-0.5 bg-gradient-to-b from-transparent via-white to-transparent" />
-          <p className="flex items-center justify-center font-medium my-10 aspect-square bg-black/15 p-2 rounded-full">
+          <div className="h-72 w-0.5 bg-gradient-to-b from-transparent via-[#8B5CF6]/50 to-transparent" />
+          <p className="brand-pill my-10 flex aspect-square items-center justify-center rounded-full p-2 font-medium">
             02
           </p>
-          <div className="h-72 w-0.5 bg-gradient-to-b from-transparent via-white to-transparent" />
-          <p className="flex items-center justify-center font-medium my-10 aspect-square bg-black/15 p-2 rounded-full">
+          <div className="h-72 w-0.5 bg-gradient-to-b from-transparent via-[#E83EBB]/50 to-transparent" />
+          <p className="brand-pill my-10 flex aspect-square items-center justify-center rounded-full p-2 font-medium">
             03
           </p>
         </div>
@@ -80,14 +80,14 @@ export default function WorkflowSteps() {
               width={560}
               height={360}
               sizes="(min-width: 768px) 40vw, 100vw"
-              className="h-auto w-full max-w-sm flex-1 rounded-2xl object-cover"
+              className="brand-card h-auto w-full max-w-sm flex-1 rounded-3xl object-cover p-2"
             />
-            <div className="flex-1 flex flex-col gap-6 md:px-6 max-w-md">
-              <h3 className="text-2xl font-medium text-white">{step.title}</h3>
-              <p className="text-gray-100 text-sm/6 line-clamp-3 pb-2">
+            <div className="brand-card flex max-w-md flex-1 flex-col gap-6 rounded-3xl p-7 md:px-8">
+              <h3 className="text-2xl font-semibold text-[#080B2B]">{step.title}</h3>
+              <p className="line-clamp-3 pb-2 text-sm/6 text-[#28304A]">
                 {step.description}
               </p>
-              <a href={step.link} className="flex items-center gap-2">
+              <a href={step.link} className="flex items-center gap-2 font-semibold text-[#5B22E8]">
                 Learn More
                 <ExternalLinkIcon className="size-4" />
               </a>
@@ -99,7 +99,7 @@ export default function WorkflowSteps() {
         <Link
           href="/projects"
           scroll={false}
-          className="rounded-full border border-sky-400/40 bg-sky-500 px-8 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(56,189,248,0.35)] transition hover:bg-sky-600"
+          className="btn-primary rounded-full px-8 py-3 text-sm font-semibold transition"
         >
           View All Projects
         </Link>

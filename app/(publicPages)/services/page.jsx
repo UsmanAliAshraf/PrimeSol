@@ -22,9 +22,9 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center text-center px-4 pt-44 pb-24 bg-[url('/assets/light-hero-gradient.svg')] dark:bg-[url('/assets/dark-hero-gradient.svg')] bg-no-repeat bg-cover">
+      <div className="brand-hero flex flex-col items-center justify-center px-4 pt-44 pb-24 text-center">
         <motion.p
-          className="flex flex-wrap items-center justify-center gap-3 p-1.5 px-6 rounded-full border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-600/20 text-xs"
+          className="brand-pill flex flex-wrap items-center justify-center gap-3 rounded-full px-6 py-2 text-xs"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -34,20 +34,20 @@ export default function ServicesPage() {
         </motion.p>
 
         <motion.h1
-          className="mt-4 text-5xl/15 md:text-[64px]/19 font-semibold max-w-4xl"
+          className="mt-4 max-w-4xl text-4xl/12 font-semibold text-[#080B2B] md:text-[64px]/19"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           Services for Teams That Need{" "}
-          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="brand-gradient-text">
             Things Built Properly
           </span>
         </motion.h1>
 
         <motion.p
-          className="text-base dark:text-slate-300 max-w-2xl mt-3"
+          className="mt-3 max-w-2xl text-base text-[#28304A]"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -65,13 +65,13 @@ export default function ServicesPage() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <Link href="/contact" scroll={false}>
-            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
+            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
               Get Started
             </button>
           </Link>
 
           <Link href="/projects" scroll={false}>
-            <button className="flex items-center gap-2 border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+            <button className="btn-secondary flex h-11 items-center gap-2 rounded-xl px-6 font-semibold transition">
               View Projects
               <ArrowRight className="size-4" />
             </button>
@@ -87,11 +87,11 @@ export default function ServicesPage() {
           text3="Start with one focused service, or combine a few into a complete project."
         />
 
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-10 px-6 md:px-16 lg:px-24 xl:px-35">
+        <div className="mt-12 grid grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:px-16 lg:grid-cols-3 lg:px-24 xl:px-35">
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
-              className="p-7 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-86 transition hover:-translate-y-1 hover:border-sky-400/40"
+              className="brand-card brand-card-hover rounded-3xl p-7"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -101,14 +101,13 @@ export default function ServicesPage() {
                 delay: index * 0.08,
               }}
             >
-              <service.icon
-                className="text-sky-400 size-9 mt-3"
-                strokeWidth={1.3}
-              />
+              <div className="icon-gradient flex size-14 items-center justify-center rounded-2xl">
+                <service.icon className="size-8" strokeWidth={1.5} />
+              </div>
 
-              <h3 className="text-lg font-semibold">{service.title}</h3>
+              <h3 className="mt-5 text-lg font-semibold text-[#080B2B]">{service.title}</h3>
 
-              <p className="text-slate-400 text-sm/6">
+              <p className="mt-3 text-sm/6 text-[#28304A]">
                 {service.description}
               </p>
             </motion.div>
@@ -128,7 +127,7 @@ export default function ServicesPage() {
           {processSteps.map((step, index) => (
             <motion.div
               key={index}
-              className="p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 transition hover:-translate-y-1"
+              className="brand-card brand-card-hover rounded-2xl p-6"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -138,11 +137,11 @@ export default function ServicesPage() {
                 delay: index * 0.1,
               }}
             >
-              <div className="size-10 rounded-full bg-sky-500 text-white flex items-center justify-center font-semibold">
+              <div className="btn-primary flex size-10 items-center justify-center rounded-full font-semibold">
                 {index + 1}
               </div>
 
-              <p className="mt-5 text-sm font-medium text-slate-700 dark:text-slate-200">
+              <p className="mt-5 text-sm font-semibold text-[#11142D]">
                 {step}
               </p>
             </motion.div>
@@ -167,7 +166,7 @@ export default function ServicesPage() {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="flex items-center gap-4 p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 transition hover:-translate-y-1"
+              className="brand-card brand-card-hover flex items-center gap-4 rounded-2xl p-6"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -178,11 +177,11 @@ export default function ServicesPage() {
               }}
             >
               <CheckCircle2
-                className="size-7 text-sky-400 shrink-0"
+                className="size-7 shrink-0 text-[#5B22E8]"
                 strokeWidth={1.5}
               />
 
-              <p className="text-sm font-medium text-slate-700 dark:text-slate-200">
+              <p className="text-sm font-semibold text-[#11142D]">
                 {item}
               </p>
             </motion.div>
@@ -192,7 +191,7 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <motion.div
-        className="flex flex-col items-center text-center justify-center mt-20 pb-24 px-6"
+        className="soft-section mx-6 mt-24 flex flex-col items-center justify-center rounded-[2rem] px-6 py-16 text-center md:mx-16 lg:mx-24 xl:mx-35"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -203,19 +202,19 @@ export default function ServicesPage() {
           Ready to Start Your Project?
         </h3>
 
-        <p className="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
+        <p className="mx-auto max-w-xl text-[#28304A]">
           Let’s talk through what you need and turn it into a clear project plan.
         </p>
 
         <div className="flex items-center gap-4 mt-8">
           <Link href="/contact" scroll={false}>
-            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
+            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
               Contact Us
             </button>
           </Link>
 
           <Link href="/about" scroll={false}>
-            <button className="border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+            <button className="btn-secondary h-11 rounded-xl px-6 font-semibold transition">
               About PrimeSol
             </button>
           </Link>

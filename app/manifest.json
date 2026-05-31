@@ -7,15 +7,9 @@
             "sizes": "any",
             "type": "image/svg+xml",
             "purpose": "any"
-        },
-        {
-            "src": "/assets/primesol-icon-dark-mode.svg",
-            "sizes": "any",
-            "type": "image/svg+xml",
-            "purpose": "any"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#F3ECFF",
+    "background_color": "#F7F2FF",
     "display": "standalone"
 }

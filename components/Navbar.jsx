@@ -4,7 +4,6 @@ import { MenuIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -18,10 +17,10 @@ export default function Navbar() {
     }, [openMobileMenu]);
 
     return (
-        <nav className={`flex items-center justify-between fixed z-50 top-0 w-full px-6 md:px-16 lg:px-24 xl:px-32 py-3 md:py-3.5 ${openMobileMenu ? "" : "backdrop-blur"}`}>
+        <nav className={`fixed top-0 z-50 flex w-full items-center justify-between border-b border-[rgba(91,34,232,0.10)] bg-white/72 px-6 py-3 shadow-[0_10px_35px_rgba(91,34,232,0.08)] backdrop-blur-[18px] md:px-16 md:py-3.5 lg:px-24 xl:px-32 ${openMobileMenu ? "" : "backdrop-blur"}`}>
             <Link href="/" scroll={false} className="flex shrink-0 items-center gap-2.5 md:gap-3">
                 <Image
-                    className="size-12 shrink-0 object-contain md:size-14 dark:hidden"
+                    className="size-12 shrink-0 object-contain md:size-14"
                     src="/assets/primesol-icon-light-mode.svg"
                     alt="PrimeSol"
                     width={56}
@@ -29,14 +28,7 @@ export default function Navbar() {
                     priority
                     fetchPriority="high"
                 />
-                <Image
-                    className="hidden size-12 shrink-0 object-contain md:size-14 dark:block"
-                    src="/assets/primesol-icon-dark-mode.svg"
-                    alt="PrimeSol"
-                    width={56}
-                    height={56}
-                />
-                <span className="text-lg font-semibold tracking-tight text-stone-900 dark:text-white md:text-xl">
+                <span className="text-lg font-semibold tracking-tight text-[#080B2B] md:text-xl">
                     PrimeSol
                 </span>
             </Link>
@@ -46,14 +38,15 @@ export default function Navbar() {
                         key={link.name}
                         href={link.href}
                         scroll={false}
-                        className="text-sm text-slate-700 transition-colors hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+                        className="group relative text-sm font-medium text-[#11142D] transition-colors hover:text-[#5B22E8]"
                     >
                         {link.name}
+                        <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-[#4F20E8] via-[#8B5CF6] to-[#E83EBB] transition-all group-hover:w-full" />
                     </Link>
                 ))}
             </div>
             {/* Mobile menu */}
-            <div className={`fixed inset-0 flex flex-col items-center justify-center gap-6 text-lg font-medium bg-white/60 dark:bg-black/40 backdrop-blur-md md:hidden transition duration-300 ${openMobileMenu ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className={`fixed inset-0 flex flex-col items-center justify-center gap-6 bg-[#F7F2FF]/90 text-lg font-medium text-[#11142D] backdrop-blur-md transition duration-300 md:hidden ${openMobileMenu ? "translate-x-0" : "-translate-x-full"}`}>
                 {navLinks.map((link) => (
                     <Link key={link.name} href={link.href} scroll={false} onClick={() => setOpenMobileMenu(false)}>
                         {link.name}
@@ -63,24 +56,23 @@ export default function Navbar() {
                     href="/contact"
                     scroll={false}
                     onClick={() => setOpenMobileMenu(false)}
-                    className="rounded-md border border-sky-500/40 bg-sky-500/10 px-5 py-2 text-sm text-sky-800 transition hover:bg-sky-500/20 dark:bg-sky-500/15 dark:text-sky-100 dark:hover:bg-sky-500/25"
+                    className="btn-primary rounded-xl px-5 py-2 text-sm font-semibold transition"
                 >
                     Book a Call
                 </Link>
-                <button className="aspect-square size-10 p-1 items-center justify-center bg-sky-500 hover:bg-sky-600 transition text-white rounded-md flex" onClick={() => setOpenMobileMenu(false)}>
+                <button className="btn-primary flex aspect-square size-10 items-center justify-center rounded-xl p-1 transition" onClick={() => setOpenMobileMenu(false)}>
                     <XIcon />
                 </button>
             </div>
             <div className="flex items-center gap-4">
-                <ThemeToggle />
                 <Link
                     href="/contact"
                     scroll={false}
-                    className="hidden md:inline-flex items-center rounded-md bg-sky-500 px-4 py-2 text-sm font-medium text-white transition hover:bg-sky-600"
+                    className="btn-primary hidden items-center rounded-xl px-4 py-2 text-sm font-semibold transition md:inline-flex"
                 >
                     Book a Call
                 </Link>
-                <button onClick={() => setOpenMobileMenu(!openMobileMenu)} className="md:hidden">
+                <button onClick={() => setOpenMobileMenu(!openMobileMenu)} className="text-[#11142D] md:hidden">
                     <MenuIcon size={26} className="active:scale-90 transition" />
                 </button>
             </div>

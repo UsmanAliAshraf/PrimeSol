@@ -51,7 +51,7 @@ export default function Members() {
         {team.map((member, index) => (
           <motion.article
             key={member.name}
-            className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-sky-300 dark:border-slate-800 dark:bg-slate-900/60 dark:shadow-[0_0_45px_rgba(56,189,248,0.08)] dark:hover:border-sky-500/50"
+            className="brand-card brand-card-hover group relative overflow-hidden rounded-3xl"
             initial={{ y: 90, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -63,15 +63,15 @@ export default function Members() {
               mass: 1,
             }}
           >
-            <div className="relative aspect-[4/5] min-h-88 overflow-hidden bg-[#111111]">
+            <div className="relative aspect-[4/5] min-h-88 overflow-hidden bg-gradient-to-br from-[#F3ECFF] via-[#EEF4FF] to-[#FFF7FE]">
               <img
                 className={`h-full w-full object-contain object-center transition duration-500 ${member.imageClassName}`}
                 src={member.image}
                 alt={`${member.name}, ${member.role}`}
               />
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#080B2B]/72 via-[#080B2B]/18 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
-                <p className="w-max rounded-full border border-white/30 bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
+                <p className="w-max rounded-full border border-white/40 bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
                   {member.role}
                 </p>
               </div>
@@ -79,13 +79,13 @@ export default function Members() {
 
             <div className="space-y-4 p-6">
               <div>
-                <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
+                <h3 className="text-xl font-semibold text-[#080B2B]">
                   {member.name}
                 </h3>
-                <div className="mt-3 h-px w-16 bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400" />
+                <div className="mt-3 h-px w-16 bg-gradient-to-r from-[#19A7FF] via-[#8B5CF6] to-[#E83EBB]" />
               </div>
 
-              <p className="text-sm/7 text-slate-600 dark:text-slate-300">
+              <p className="text-sm/7 text-[#28304A]">
                 {member.summary}
               </p>
             </div>

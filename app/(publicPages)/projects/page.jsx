@@ -297,7 +297,7 @@ const industries = [
 
 function ProjectAction({ project }) {
   const label = project.linkLabel || "View Project";
-  const className = "flex items-center gap-2 text-sm font-medium text-sky-600 dark:text-sky-300";
+  const className = "flex items-center gap-2 text-sm font-semibold text-[#5B22E8]";
 
   if (project.link?.startsWith("http")) {
     return (
@@ -327,9 +327,9 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative overflow-hidden px-4 pt-44 pb-24 text-center bg-[url('/assets/light-hero-gradient.svg')] dark:bg-[url('/assets/dark-hero-gradient.svg')] bg-no-repeat bg-cover">
+      <div className="brand-hero relative overflow-hidden px-4 pt-44 pb-24 text-center">
         <motion.p
-          className="mx-auto flex w-max items-center justify-center rounded-full border border-slate-300 bg-white/70 px-6 py-2 text-xs dark:border-slate-600 dark:bg-slate-600/20"
+          className="brand-pill mx-auto flex w-max items-center justify-center rounded-full px-6 py-2 text-xs"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -339,20 +339,20 @@ export default function ProjectsPage() {
         </motion.p>
 
         <motion.h1
-          className="mx-auto mt-4 max-w-5xl text-5xl/15 font-semibold md:text-[64px]/19"
+          className="mx-auto mt-4 max-w-5xl text-4xl/12 font-semibold text-[#080B2B] md:text-[64px]/19"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           Work Examples Across{" "}
-          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="brand-gradient-text">
             Real Business Needs
           </span>
         </motion.h1>
 
         <motion.p
-          className="mx-auto mt-3 max-w-2xl text-base dark:text-slate-300"
+          className="mx-auto mt-3 max-w-2xl text-base text-[#28304A]"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -379,8 +379,8 @@ export default function ProjectsPage() {
               onClick={() => setActiveTab(tab)}
               className={`rounded-full border px-5 py-2 text-sm transition ${
                 activeTab === tab
-                  ? "border-sky-400 bg-sky-500 text-white shadow-[0_0_25px_rgba(56,189,248,0.35)]"
-                  : "border-slate-200 bg-white text-slate-600 hover:-translate-y-0.5 hover:border-sky-400/40 dark:border-slate-800 dark:bg-slate-800/20 dark:text-slate-300"
+                  ? "btn-primary border-transparent text-white"
+                  : "border-[rgba(91,34,232,0.18)] bg-[#F3ECFF]/80 text-[#28304A] hover:-translate-y-0.5 hover:border-[rgba(91,34,232,0.32)] hover:bg-[#EEF4FF] hover:text-[#5B22E8]"
               }`}
             >
               {tab}
@@ -388,10 +388,10 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        <p className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
+        <p className="mt-6 text-center text-sm text-[#28304A]">
           Showing {filteredProjects.length} project
           {filteredProjects.length > 1 ? "s" : ""} in{" "}
-          <span className="text-sky-400">{activeTab}</span>
+          <span className="font-semibold text-[#5B22E8]">{activeTab}</span>
         </p>
 
         <motion.div
@@ -404,7 +404,7 @@ export default function ProjectsPage() {
           {filteredProjects.map((project, index) => (
             <motion.div
               key={`${activeTab}-${index}`}
-              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_0_40px_rgba(56,189,248,0.10)] transition hover:-translate-y-2 hover:border-sky-400/30 dark:border-slate-800 dark:bg-slate-900/50"
+              className="brand-card brand-card-hover group overflow-hidden rounded-3xl"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -421,16 +421,16 @@ export default function ProjectsPage() {
                   onError={(event) => {
                     event.currentTarget.src = "/assets/parallel.png";
                   }}
-                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-64 w-full rounded-b-3xl object-cover p-3 transition duration-500 group-hover:scale-[1.03]"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-x-3 bottom-3 h-32 rounded-b-2xl bg-gradient-to-t from-[#080B2B]/70 via-[#080B2B]/16 to-transparent" />
 
-                <div className="absolute left-5 top-5 rounded-full border border-white/20 bg-black/40 px-4 py-2 text-xs font-medium text-white backdrop-blur">
+                <div className="brand-pill absolute left-5 top-5 rounded-full px-4 py-2 text-xs font-semibold">
                   {project.category}
                 </div>
 
-                <div className="absolute bottom-5 left-5 flex size-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white backdrop-blur">
+                <div className="absolute bottom-5 left-5 flex size-12 items-center justify-center rounded-xl border border-white/30 bg-white/20 text-white backdrop-blur">
                   <project.icon className="size-6" strokeWidth={1.5} />
                 </div>
               </div>
@@ -440,23 +440,23 @@ export default function ProjectsPage() {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs text-sky-700 dark:text-sky-300"
+                      className="rounded-full border border-[rgba(91,34,232,0.16)] bg-[#F3ECFF] px-3 py-1 text-xs font-medium text-[#5B22E8]"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-[#080B2B]">{project.title}</h3>
 
-                <p className="mt-3 text-sm/7 text-slate-600 dark:text-slate-300">
+                <p className="mt-3 text-sm/7 text-[#28304A]">
                   {project.description}
                 </p>
 
                 <div className="mt-6 flex items-center justify-between">
                   <ProjectAction project={project} />
 
-                  <div className="flex size-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 transition group-hover:bg-sky-500 dark:border-slate-700 dark:bg-slate-800">
+                  <div className="flex size-10 items-center justify-center rounded-full border border-[rgba(91,34,232,0.18)] bg-[#F3ECFF] transition group-hover:bg-[#5B22E8]">
                     <ArrowRight className="size-4 transition group-hover:text-white" />
                   </div>
                 </div>
@@ -478,14 +478,14 @@ export default function ProjectsPage() {
           {processSteps.map((step, index) => (
             <motion.div
               key={index}
-              className="rounded-xl border border-slate-200 bg-white p-6 text-center transition hover:-translate-y-1 dark:border-slate-800 dark:bg-slate-800/20"
+              className="brand-card brand-card-hover rounded-2xl p-6 text-center"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="mx-auto flex size-11 items-center justify-center rounded-full bg-sky-500 text-white">
+              <div className="btn-primary mx-auto flex size-11 items-center justify-center rounded-full">
                 {index + 1}
               </div>
               <h3 className="mt-5 text-base font-semibold">{step}</h3>
@@ -506,7 +506,7 @@ export default function ProjectsPage() {
           {industries.map((item, index) => (
             <motion.span
               key={index}
-              className="rounded-full border border-slate-200 bg-white px-5 py-2 text-sm text-slate-600 transition hover:-translate-y-1 dark:border-slate-800 dark:bg-slate-800/20 dark:text-slate-300"
+              className="brand-pill rounded-full px-5 py-2 text-sm transition hover:-translate-y-1"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -521,7 +521,7 @@ export default function ProjectsPage() {
 
       {/* CTA */}
       <motion.div
-        className="mt-20 flex flex-col items-center justify-center px-6 pb-24 text-center"
+        className="soft-section mx-6 mt-24 flex flex-col items-center justify-center rounded-[2rem] px-6 py-16 text-center md:mx-16 lg:mx-24 xl:mx-35"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -532,19 +532,19 @@ export default function ProjectsPage() {
           Have Something Similar in Mind?
         </h3>
 
-        <p className="mx-auto max-w-xl text-slate-600 dark:text-slate-200">
+        <p className="mx-auto max-w-xl text-[#28304A]">
           Share the idea with us and we will help turn it into a realistic plan.
         </p>
 
         <div className="mt-8 flex items-center gap-4">
           <Link href="/contact" scroll={false}>
-            <button className="h-11 rounded-md bg-sky-500 px-6 text-white transition hover:bg-sky-600">
+            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
               Start Your Project
             </button>
           </Link>
 
           <Link href="/about" scroll={false}>
-            <button className="h-11 rounded-md border border-sky-500/40 px-6 text-slate-600 transition dark:text-white">
+            <button className="btn-secondary h-11 rounded-xl px-6 font-semibold transition">
               About PrimeSol
             </button>
           </Link>

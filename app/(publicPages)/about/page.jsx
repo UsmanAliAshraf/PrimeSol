@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 import { servicesData } from "@/data/servicesData";
@@ -13,56 +12,15 @@ const points = [
   "Clean builds that are easy to maintain",
 ];
 const fadeUp = { hidden: { y: 80, opacity: 0 }, visible: { y: 0, opacity: 1 } };
-function Counter({ end, suffix = "" }) {
-  const [count, setCount] = useState(0);
-  const [startCounter, setStartCounter] = useState(false);
-  const counterRef = useRef(null);
-  useEffect(() => {
-    if (!counterRef.current) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStartCounter(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 },
-    );
-    observer.observe(counterRef.current);
-    return () => observer.disconnect();
-  }, []);
-  useEffect(() => {
-    if (!startCounter) return;
-    let start = 0;
-    const duration = 1500;
-    const increment = end / (duration / 20);
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 20);
-    return () => clearInterval(timer);
-  }, [startCounter, end]);
-  return (
-    <span ref={counterRef}>
-      {" "}
-      {count} {suffix}{" "}
-    </span>
-  );
-}
 export default function AboutPage() {
   return (
     <>
       {" "}
       {/* Hero Section */}{" "}
-      <div className="flex flex-col items-center justify-center text-center px-4 pt-44 pb-24 bg-[url('/assets/light-hero-gradient.svg')] dark:bg-[url('/assets/dark-hero-gradient.svg')] bg-no-repeat bg-cover">
+      <div className="brand-hero flex flex-col items-center justify-center px-4 pt-44 pb-24 text-center">
         {" "}
         <motion.p
-          className="flex flex-wrap items-center justify-center gap-3 p-1.5 px-6 rounded-full border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-600/20 text-xs"
+          className="brand-pill flex flex-wrap items-center justify-center gap-3 rounded-full px-6 py-2 text-xs"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -72,7 +30,7 @@ export default function AboutPage() {
           About PrimeSol{" "}
         </motion.p>{" "}
         <motion.h1
-          className="mt-4 text-5xl/15 md:text-[64px]/19 font-semibold max-w-4xl"
+          className="mt-4 max-w-4xl text-4xl/12 font-semibold text-[#080B2B] md:text-[64px]/19"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -80,13 +38,13 @@ export default function AboutPage() {
         >
           {" "}
           Building Useful Software for{" "}
-          <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="brand-gradient-text">
             {" "}
             Real Business Work{" "}
           </span>{" "}
         </motion.h1>{" "}
         <motion.p
-          className="text-base dark:text-slate-300 max-w-2xl mt-3"
+          className="mt-3 max-w-2xl text-base text-[#28304A]"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
@@ -107,14 +65,14 @@ export default function AboutPage() {
           {" "}
           <Link href="/services" scroll={false}>
             {" "}
-            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
+            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
               {" "}
               Explore Services{" "}
             </button>{" "}
           </Link>{" "}
           <Link href="/contact" scroll={false}>
             {" "}
-            <button className="flex items-center gap-2 border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+            <button className="btn-secondary flex h-11 items-center gap-2 rounded-xl px-6 font-semibold transition">
               {" "}
               Contact Us <ArrowRight className="size-4" />{" "}
             </button>{" "}
@@ -132,7 +90,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12 items-center">
           {" "}
           <motion.div
-            className="p-8 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20"
+            className="brand-card rounded-3xl p-8"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -144,14 +102,14 @@ export default function AboutPage() {
               {" "}
               We turn business problems into working products.{" "}
             </h3>{" "}
-            <p className="text-slate-600 dark:text-slate-300 text-sm/7">
+            <p className="text-sm/7 text-[#28304A]">
               {" "}
               At PrimeSol, we build websites, web applications, mobile apps,
               SaaS products, dashboards, and automation systems. Our job is to
               understand what is slowing your team down, then build the right
               tool to make that work easier.{" "}
             </p>{" "}
-            <p className="text-slate-600 dark:text-slate-300 text-sm/7 mt-4">
+            <p className="mt-4 text-sm/7 text-[#28304A]">
               {" "}
               We care about clean design, stable development, and simple
               handover. The final product should look professional, work
@@ -163,7 +121,7 @@ export default function AboutPage() {
             {points.map((point, index) => (
               <motion.div
                 key={index}
-                className="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 transition hover:-translate-y-1"
+                className="brand-card brand-card-hover rounded-2xl p-5"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -172,10 +130,10 @@ export default function AboutPage() {
               >
                 {" "}
                 <CheckCircle2
-                  className="text-sky-400 size-7 mb-4"
+                  className="mb-4 size-7 text-[#5B22E8]"
                   strokeWidth={1.5}
                 />{" "}
-                <p className="text-sm font-medium text-slate-700 dark:text-slate-200">
+                <p className="text-sm font-semibold text-[#11142D]">
                   {" "}
                   {point}{" "}
                 </p>{" "}
@@ -197,7 +155,7 @@ export default function AboutPage() {
           {servicesData.slice(0, 5).map((service, index) => (
             <motion.div
               key={index}
-              className="p-6 rounded-xl space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 max-w-80 md:max-w-86 transition hover:-translate-y-1"
+              className="brand-card brand-card-hover max-w-80 rounded-2xl p-6 md:max-w-86"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -206,11 +164,11 @@ export default function AboutPage() {
             >
               {" "}
               <service.icon
-                className="text-sky-400 size-8 mt-4"
+                className="size-8 text-[#5B22E8]"
                 strokeWidth={1.3}
               />{" "}
-              <h3 className="text-base font-medium">{service.title}</h3>{" "}
-              <p className="text-slate-400 line-clamp-2">
+              <h3 className="text-base font-semibold text-[#080B2B]">{service.title}</h3>{" "}
+              <p className="line-clamp-2 text-[#28304A]">
                 {" "}
                 {service.description}{" "}
               </p>{" "}
@@ -228,53 +186,16 @@ export default function AboutPage() {
           {" "}
           <Link href="/services" scroll={false}>
             {" "}
-            <button className="bg-sky-500 hover:bg-sky-600 text-white rounded-md px-6 py-2 transition">
+            <button className="btn-primary rounded-xl px-6 py-2 font-semibold transition">
               {" "}
               View More{" "}
             </button>{" "}
           </Link>{" "}
         </motion.div>{" "}
       </section>{" "}
-      {/* Stats */}{" "}
-      <section className="px-6 md:px-16 lg:px-24 xl:px-35 mt-28">
-        {" "}
-        <SectionTitle
-          text1="Our Impact"
-          text2="A Few Simple Measures"
-          text3="Our work is measured by shipped projects, happy clients, and systems that keep doing their job."
-        />{" "}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-10">
-          {" "}
-          {[150, 50, 100].map((number, index) => (
-            <motion.div
-              key={index}
-              className="p-8 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/20 transition hover:-translate-y-1"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.12 }}
-            >
-              {" "}
-              <h3 className="text-4xl font-semibold bg-gradient-to-r from-sky-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
-                {" "}
-                {index === 0 && <Counter end={150} suffix="+" />}{" "}
-                {index === 1 && <Counter end={50} suffix="+" />}{" "}
-                {index === 2 && <Counter end={100} suffix="%" />}{" "}
-              </h3>{" "}
-              <p className="text-slate-500 dark:text-slate-300 mt-2">
-                {" "}
-                {index === 0 && "Projects Delivered"}{" "}
-                {index === 1 && "Business Clients"}{" "}
-                {index === 2 && "Delivery Focused"}{" "}
-              </p>{" "}
-            </motion.div>
-          ))}{" "}
-        </div>{" "}
-      </section>{" "}
       <Members /> {/* CTA */}{" "}
       <motion.div
-        className="flex flex-col items-center text-center justify-center mt-20 pb-24 px-6"
+        className="soft-section mx-6 mt-24 flex flex-col items-center justify-center rounded-[2rem] px-6 py-16 text-center md:mx-16 lg:mx-24 xl:mx-35"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -286,7 +207,7 @@ export default function AboutPage() {
           {" "}
           Ready to Build Something Useful?{" "}
         </h3>{" "}
-        <p className="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
+        <p className="mx-auto max-w-xl text-[#28304A]">
           {" "}
           Let us help you plan the website, app, or automation your business
           actually needs next.{" "}
@@ -295,14 +216,14 @@ export default function AboutPage() {
           {" "}
           <Link href="/contact" scroll={false}>
             {" "}
-            <button className="bg-sky-500 hover:bg-sky-600 transition text-white rounded-md px-6 h-11">
+            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
               {" "}
               Get Started{" "}
             </button>{" "}
           </Link>{" "}
           <Link href="/projects" scroll={false}>
             {" "}
-            <button className="border border-sky-500/40 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
+            <button className="btn-secondary h-11 rounded-xl px-6 font-semibold transition">
               {" "}
               View Projects{" "}
             </button>{" "}
