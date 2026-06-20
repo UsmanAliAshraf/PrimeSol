@@ -7,6 +7,15 @@ import ClientFeedback from "@/sections/ClientFeedback";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
+// Services that have dedicated landing pages
+const serviceSlugMap = {
+    "AI Automation": "ai-automation",
+    "Custom Website Development": "web-development",
+    "Custom Web App Development": "web-development",
+    "Mobile App Development": "mobile-app-development",
+    "SaaS App Development": "saas-development",
+};
+
 const fadeUp = {
   hidden: { y: 80, opacity: 0 },
   visible: { y: 0, opacity: 1 },
@@ -112,6 +121,16 @@ export default function ServicesPageClient() {
               <p className="mt-3 text-sm/6 text-[#28304A]">
                 {service.description}
               </p>
+
+              {serviceSlugMap[service.title] && (
+                <Link
+                  href={`/services/${serviceSlugMap[service.title]}`}
+                  scroll={false}
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#5B22E8] transition hover:gap-2.5"
+                >
+                  Learn more <ArrowRight className="size-4" />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

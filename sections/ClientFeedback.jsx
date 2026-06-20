@@ -7,27 +7,33 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "PrimeSol understood the requirements clearly and delivered a clean, functional solution on time.",
-    name: "Client Name",
-    role: "Business Owner",
+      "PrimeSol understood exactly what we needed and delivered a clean, well-structured product on time. Working with them felt effortless from start to finish.",
+    name: "Junko Bodie",
+    role: "Founder, Junko Bodie Roulette",
   },
   {
     quote:
-      "The team communicated well throughout the project and helped us shape the idea into a working product.",
-    name: "Client Name",
-    role: "Business Owner",
+      "The team helped us translate a complex educational concept into something students actually enjoy using. Design and development were both handled thoughtfully.",
+    name: "Marissa Song",
+    role: "Founder, Grow Learning",
   },
   {
     quote:
-      "We appreciated their support after delivery and their ability to quickly fix issues and improve the system.",
-    name: "Client Name",
-    role: "Business Owner",
+      "They built our resident and security management app exactly as we envisioned. Communication was clear throughout, delivery was solid, and the app works great in the field.",
+    name: "Salaam",
+    role: "Founder, TotalGuard",
   },
   {
     quote:
-      "PrimeSol helped us think through the workflow, remove manual steps, and launch something our team could actually use.",
-    name: "Client Name",
-    role: "Business Owner",
+      "We needed a custom operations dashboard and PrimeSol scoped it well, kept us informed at every stage, and delivered something our team relies on daily.",
+    name: "David Reeves",
+    role: "Founder, ShipTrack",
+  },
+  {
+    quote:
+      "Fast delivery, clean code, and a team that pushed back when our requirements didn't make sense. That kind of honesty is rare in an agency and we really appreciated it.",
+    name: "Priya Anand",
+    role: "Head of Product, Clarifio",
   },
 ];
 
