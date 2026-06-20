@@ -1,271 +1,34 @@
-"use client";
-import { motion } from "framer-motion";
-import SectionTitle from "@/components/SectionTitle";
-import { servicesData } from "@/data/servicesData";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import Members from "@/sections/members";
-import Link from "next/link";
-const points = [
-  "AI-powered workflows that reduce repetitive work",
-  "Websites and apps that help businesses go digital",
-  "Dashboards and portals for daily operations",
-  "Clean systems that are easy to use and maintain",
-];
-const fadeUp = { hidden: { y: 80, opacity: 0 }, visible: { y: 0, opacity: 1 } };
+import AboutPageClient from "./AboutPageClient";
+
+export const metadata = {
+    title: "About PrimeSol | AI-First Software Agency",
+    description:
+        "Learn how PrimeSol started and what drives us. We are an AI-first software agency helping growing businesses go digital with websites, apps, automation, and AI agents.",
+    keywords: [
+        "about PrimeSol",
+        "AI software agency",
+        "software development team",
+        "web development company Pakistan",
+        "AI-first agency",
+        "business software company",
+    ],
+    alternates: {
+        canonical: "https://primesol.co/about",
+    },
+    openGraph: {
+        title: "About PrimeSol | AI-First Software Agency",
+        description:
+            "Learn how PrimeSol started and what drives us. We are an AI-first software agency helping growing businesses go digital with websites, apps, automation, and AI agents.",
+        url: "https://primesol.co/about",
+        type: "website",
+    },
+    twitter: {
+        title: "About PrimeSol | AI-First Software Agency",
+        description:
+            "Learn how PrimeSol started and what drives us. We are an AI-first software agency helping growing businesses go digital with websites, apps, automation, and AI agents.",
+    },
+};
+
 export default function AboutPage() {
-  return (
-    <>
-      {" "}
-      {/* Hero Section */}{" "}
-      <div className="brand-hero flex flex-col items-center justify-center px-4 pt-44 pb-24 text-center">
-        {" "}
-        <motion.p
-          className="brand-pill flex flex-wrap items-center justify-center gap-3 rounded-full px-6 py-2 text-xs"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5 }}
-        >
-          {" "}
-          About PrimeSol{" "}
-        </motion.p>{" "}
-        <motion.h1
-          className="mt-4 max-w-4xl text-4xl/12 font-semibold text-[#080B2B] md:text-[64px]/19"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          {" "}
-          Building AI-First Software for{" "}
-          <span className="brand-gradient-text">
-            {" "}
-            Growing Businesses{" "}
-          </span>{" "}
-        </motion.h1>{" "}
-        <motion.p
-          className="mt-3 max-w-2xl text-base text-[#28304A]"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {" "}
-          PrimeSol helps businesses go digital with websites, apps, dashboards,
-          automations, and AI agents that reduce manual work and make daily
-          operations easier to manage.{" "}
-        </motion.p>{" "}
-        <motion.div
-          className="flex items-center gap-4 mt-8"
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          {" "}
-          <Link href="/services" scroll={false}>
-            {" "}
-            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
-              {" "}
-              Explore Services{" "}
-            </button>{" "}
-          </Link>{" "}
-          <Link href="/contact" scroll={false}>
-            {" "}
-            <button className="btn-secondary flex h-11 items-center gap-2 rounded-xl px-6 font-semibold transition">
-              {" "}
-              Contact Us <ArrowRight className="size-4" />{" "}
-            </button>{" "}
-          </Link>{" "}
-        </motion.div>{" "}
-      </div>{" "}
-      {/* Our Story */}{" "}
-      <section className="px-6 md:px-16 lg:px-24 xl:px-35 mt-28">
-        <SectionTitle
-          text1="Our Story"
-          text2="From a Hostel Room to PrimeSol"
-          text3="A young agency built from persistence, client trust, and a clear belief that better software should help businesses move faster."
-        />
-        <motion.div
-          className="brand-card mx-auto mt-12 max-w-5xl rounded-3xl p-8 md:p-10"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="space-y-5 text-sm/7 text-[#28304A] md:text-base/8">
-            <p>
-              PrimeSol started in 2023 inside a university hostel, where three
-              friends created their first Fiverr account with one goal: help
-              small businesses go digital and scale through better software.
-            </p>
-            <p>
-              The beginning was not easy. The team struggled for months before
-              landing the first client. After that, one project turned into
-              another, and gradually more businesses started trusting the team
-              with their websites, apps, and digital systems.
-            </p>
-            <p>
-              As the work grew, the small freelance team evolved into PrimeSol,
-              an agency focused on building practical software and AI-powered
-              solutions for businesses that want to move faster, automate work,
-              and operate more professionally.
-            </p>
-          </div>
-        </motion.div>
-      </section>{" "}
-      {/* Who We Are */}{" "}
-      <section className="px-6 md:px-16 lg:px-24 xl:px-35 mt-28">
-        {" "}
-        <SectionTitle
-          text1="Who We Are"
-          text2="A Practical AI-First Tech Partner"
-          text3="We focus on software that is useful, clear, and built around how your business actually works."
-        />{" "}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12 items-center">
-          {" "}
-          <motion.div
-            className="brand-card rounded-3xl p-8"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {" "}
-            <h3 className="text-2xl font-semibold mb-4">
-              {" "}
-              We turn business problems into working AI-first products.{" "}
-            </h3>{" "}
-            <p className="text-sm/7 text-[#28304A]">
-              {" "}
-              At PrimeSol, we build websites, web applications, mobile apps,
-              SaaS products, dashboards, AI agents, and automation systems.
-              Our job is to understand what is slowing your team down, then
-              build the right tool to make that work easier.{" "}
-            </p>{" "}
-            <p className="mt-4 text-sm/7 text-[#28304A]">
-              {" "}
-              We care about clean design, stable development, practical AI,
-              and simple handover. The final product should look professional,
-              work reliably, and make sense to the people using it.{" "}
-            </p>{" "}
-          </motion.div>{" "}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {" "}
-            {points.map((point, index) => (
-              <motion.div
-                key={index}
-                className="brand-card brand-card-hover rounded-2xl p-5"
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                {" "}
-                <CheckCircle2
-                  className="mb-4 size-7 text-[#5B22E8]"
-                  strokeWidth={1.5}
-                />{" "}
-                <p className="text-sm font-semibold text-[#11142D]">
-                  {" "}
-                  {point}{" "}
-                </p>{" "}
-              </motion.div>
-            ))}{" "}
-          </div>{" "}
-        </div>{" "}
-      </section>{" "}
-      {/* What We Do */}{" "}
-      <section className="mt-28">
-        {" "}
-        <SectionTitle
-          text1="What We Do"
-          text2="What We Help You Build"
-          text3="From first website to AI-powered internal systems, we help you ship the tools your business needs."
-        />{" "}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-4 mt-10 px-6 md:px-16 lg:px-24 xl:px-35">
-          {" "}
-          {servicesData.slice(0, 5).map((service, index) => (
-            <motion.div
-              key={index}
-              className="brand-card brand-card-hover max-w-80 rounded-2xl p-6 md:max-w-86"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              {" "}
-              <service.icon
-                className="size-8 text-[#5B22E8]"
-                strokeWidth={1.3}
-              />{" "}
-              <h3 className="text-base font-semibold text-[#080B2B]">{service.title}</h3>{" "}
-              <p className="line-clamp-2 text-[#28304A]">
-                {" "}
-                {service.description}{" "}
-              </p>{" "}
-            </motion.div>
-          ))}{" "}
-        </div>{" "}
-        <motion.div
-          className="flex justify-center mt-8"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          {" "}
-          <Link href="/services" scroll={false}>
-            {" "}
-            <button className="btn-primary rounded-xl px-6 py-2 font-semibold transition">
-              {" "}
-              View More{" "}
-            </button>{" "}
-          </Link>{" "}
-        </motion.div>{" "}
-      </section>{" "}
-      <Members /> {/* CTA */}{" "}
-      <motion.div
-        className="soft-section mx-6 mt-24 flex flex-col items-center justify-center rounded-[2rem] px-6 py-16 text-center md:mx-16 lg:mx-24 xl:mx-35"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        {" "}
-        <h3 className="text-3xl font-semibold mt-16 mb-4">
-          {" "}
-          Ready to Build Something Useful?{" "}
-        </h3>{" "}
-        <p className="mx-auto max-w-xl text-[#28304A]">
-          {" "}
-          Let us help you plan the website, app, AI agent, or automation your
-          business actually needs next.{" "}
-        </p>{" "}
-        <div className="flex items-center gap-4 mt-8">
-          {" "}
-          <Link href="/contact" scroll={false}>
-            {" "}
-            <button className="btn-primary h-11 rounded-xl px-6 font-semibold transition">
-              {" "}
-              Get Started{" "}
-            </button>{" "}
-          </Link>{" "}
-          <Link href="/projects" scroll={false}>
-            {" "}
-            <button className="btn-secondary h-11 rounded-xl px-6 font-semibold transition">
-              {" "}
-              View Projects{" "}
-            </button>{" "}
-          </Link>{" "}
-        </div>{" "}
-      </motion.div>{" "}
-    </>
-  );
+    return <AboutPageClient />;
 }
