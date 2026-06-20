@@ -4,9 +4,11 @@ import { MenuIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import BookingModal from "./BookingModal";
 
 export default function Navbar() {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
+    const [bookingOpen, setBookingOpen] = useState(false);
 
     useEffect(() => {
         if (openMobileMenu) {
@@ -17,6 +19,7 @@ export default function Navbar() {
     }, [openMobileMenu]);
 
     return (
+        <>
         <nav className={`fixed top-0 z-50 flex w-full items-center justify-between border-b border-[rgba(91,34,232,0.10)] bg-white/72 px-6 py-3 shadow-[0_10px_35px_rgba(91,34,232,0.08)] backdrop-blur-[18px] md:px-16 md:py-3.5 lg:px-24 xl:px-32 ${openMobileMenu ? "" : "backdrop-blur"}`}>
             <Link href="/" scroll={false} className="flex shrink-0 items-center gap-2.5 md:gap-3">
                 <Image
@@ -52,30 +55,30 @@ export default function Navbar() {
                         {link.name}
                     </Link>
                 ))}
-                <Link
-                    href="/contact"
-                    scroll={false}
-                    onClick={() => setOpenMobileMenu(false)}
+                <button
+                    onClick={() => { setOpenMobileMenu(false); setBookingOpen(true); }}
                     className="btn-primary rounded-xl px-5 py-2 text-sm font-semibold transition"
                 >
                     Book a Call
-                </Link>
+                </button>
                 <button className="btn-primary flex aspect-square size-10 items-center justify-center rounded-xl p-1 transition" onClick={() => setOpenMobileMenu(false)}>
                     <XIcon />
                 </button>
             </div>
             <div className="flex items-center gap-4">
-                <Link
-                    href="/contact"
-                    scroll={false}
+                <button
+                    onClick={() => setBookingOpen(true)}
                     className="btn-primary hidden items-center rounded-xl px-4 py-2 text-sm font-semibold transition md:inline-flex"
                 >
                     Book a Call
-                </Link>
+                </button>
                 <button onClick={() => setOpenMobileMenu(!openMobileMenu)} className="text-[#11142D] md:hidden">
                     <MenuIcon size={26} className="active:scale-90 transition" />
                 </button>
             </div>
         </nav>
+
+        <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
+        </>
     );
 }

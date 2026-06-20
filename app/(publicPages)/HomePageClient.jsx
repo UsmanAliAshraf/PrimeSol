@@ -11,8 +11,12 @@ import { VideoIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import BookingModal from "@/components/BookingModal";
 
 export default function HomePageClient() {
+    const [bookingOpen, setBookingOpen] = useState(false);
+
     const smoothFade = {
         hidden: { opacity: 0, y: 40 },
         visible: {
@@ -186,15 +190,16 @@ export default function HomePageClient() {
                         Start Your Project
                     </Link>
 
-                    <Link
-                        href="/contact"
-                        scroll={false}
+                    <button
+                        onClick={() => setBookingOpen(true)}
                         className="btn-secondary inline-flex h-11 items-center justify-center rounded-xl px-6 font-semibold transition"
                     >
                         Book a Call
-                    </Link>
+                    </button>
                 </div>
             </motion.div>
+
+            <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
         </>
     );
 }
