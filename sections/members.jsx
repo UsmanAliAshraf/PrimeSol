@@ -9,7 +9,7 @@ const team = [
     role: "Founder & Product Lead",
     image: "/assets/usman.png",
     imageClassName: "object-[50%_18%] scale-[1.16] group-hover:scale-[1.2]",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/usmanaleeashraff/",
     summary:
       "Leads PrimeSol’s product direction, AI solution strategy, client communication, and overall vision for building useful software.",
   },
@@ -23,11 +23,11 @@ const team = [
       "Manages delivery, project planning, client experience, and ensures projects move smoothly from idea to launch.",
   },
   {
-    name: "Ali Ahmer",
+    name: "Ehtisham Yousaf",
     role: "Co-Founder & Web Developer",
     image: "/assets/abc.png",
     imageClassName: "object-[50%_18%] scale-[1.12] group-hover:scale-[1.16]",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ehtishamyousaf/",
     summary:
       "Builds responsive websites, clean web interfaces, and performance-focused digital products for clients.",
   },
@@ -36,7 +36,7 @@ const team = [
     role: "Business Developer",
     image: "/assets/arslan.jpeg",
     imageClassName: "object-[50%_18%] scale-[1.1] group-hover:scale-[1.14]",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/m-arslan-ab98a0370/",
     summary:
       "Works on partnerships, lead generation, client needs, and helps turn business opportunities into clear project plans.",
   },
