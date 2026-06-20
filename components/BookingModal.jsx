@@ -1,11 +1,14 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 
 const CALENDLY_URL = "https://calendly.com/usmanaliashraf/30min?hide_gdpr_banner=1&background_color=f3ecff&text_color=080b2b&primary_color=5b22e8";
 
 export default function BookingModal({ isOpen, onClose }) {
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => { setMounted(true); }, []);
     // Lock body scroll when open
     useEffect(() => {
         if (isOpen) {
@@ -32,9 +35,9 @@ export default function BookingModal({ isOpen, onClose }) {
         return () => document.removeEventListener("keydown", handleKeyDown);
     }, [isOpen, handleKeyDown]);
 
-    if (!isOpen) return null;
+    if (!isOpen || !mounted) return null;
 
-    return (
+    return createPortal(
         <div
             role="dialog"
             aria-modal="true"
@@ -55,7 +58,7 @@ export default function BookingModal({ isOpen, onClose }) {
                 {/* Header bar */}
                 <div className="flex shrink-0 items-center justify-between bg-white px-6 py-4 border-b border-[rgba(91,34,232,0.12)]">
                     <div>
-                        <p className="text-xs font-semibold text-[#5B22E8] uppercase tracking-widest">PrimeSol</p>
+                        <p className="text-xs font-semibold text-[#5B22E8] tracking-widest">PrimeSol Technologies</p>
                         <h2 className="text-base font-semibold text-[#080B2B]">Book a Free 30-Minute Call</h2>
                     </div>
                     <button
@@ -77,6 +80,7 @@ export default function BookingModal({ isOpen, onClose }) {
                     allow="payment"
                 />
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }
