@@ -1,4 +1,4 @@
-const BASE = "https://primesol.co";
+const BASE = "https://www.primesol.co";
 
 const mobileAppDevelopment = {
     slug: "mobile-app-development",

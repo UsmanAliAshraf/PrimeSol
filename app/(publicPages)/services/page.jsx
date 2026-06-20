@@ -16,13 +16,13 @@ export const metadata = {
         "dashboard development",
     ],
     alternates: {
-        canonical: "https://primesol.co/services",
+        canonical: "https://www.primesol.co/services",
     },
     openGraph: {
         title: "Services | AI Automation, Web & Mobile App Development",
         description:
             "PrimeSol offers AI automation, SaaS development, web applications, mobile apps, e-commerce stores, CRM systems, and AI agents. Practical digital solutions for growing businesses.",
-        url: "https://primesol.co/services",
+        url: "https://www.primesol.co/services",
         type: "website",
     },
     twitter: {

@@ -13,13 +13,13 @@ export const metadata = {
         "business software company",
     ],
     alternates: {
-        canonical: "https://primesol.co/about",
+        canonical: "https://www.primesol.co/about",
     },
     openGraph: {
         title: "About PrimeSol | AI-First Software Agency",
         description:
             "Learn how PrimeSol started and what drives us. We are an AI-first software agency helping growing businesses go digital with websites, apps, automation, and AI agents.",
-        url: "https://primesol.co/about",
+        url: "https://www.primesol.co/about",
         type: "website",
     },
     twitter: {

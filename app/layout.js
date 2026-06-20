@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-    metadataBase: new URL("https://primesol.co"),
+    metadataBase: new URL("https://www.primesol.co"),
     title: {
         default: "PrimeSol | AI Automation, SaaS & Software Development",
         template: "%s | PrimeSol",
@@ -20,7 +20,7 @@ export const metadata = {
         "Next.js development",
         "PrimeSol",
     ],
-    authors: [{ name: "PrimeSol", url: "https://primesol.co" }],
+    authors: [{ name: "PrimeSol", url: "https://www.primesol.co" }],
     creator: "PrimeSol",
     publisher: "PrimeSol",
     robots: {
@@ -37,7 +37,7 @@ export const metadata = {
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://primesol.co",
+        url: "https://www.primesol.co",
         siteName: "PrimeSol",
         title: "PrimeSol | AI Automation, SaaS & Software Development",
         description:
@@ -60,7 +60,7 @@ export const metadata = {
         creator: "@primesol",
     },
     alternates: {
-        canonical: "https://primesol.co",
+        canonical: "https://www.primesol.co",
     },
     icons: {
         icon: [{ url: "/assets/primesol-icon-light-mode.svg", type: "image/svg+xml" }],

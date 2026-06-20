@@ -14,13 +14,13 @@ export const metadata = {
         "mobile app development contact",
     ],
     alternates: {
-        canonical: "https://primesol.co/contact",
+        canonical: "https://www.primesol.co/contact",
     },
     openGraph: {
         title: "Contact PrimeSol | Start Your Project",
         description:
             "Get in touch with PrimeSol to discuss your website, web app, mobile app, AI automation, or SaaS project. Free initial consultation. We respond within 24 hours.",
-        url: "https://primesol.co/contact",
+        url: "https://www.primesol.co/contact",
         type: "website",
     },
     twitter: {

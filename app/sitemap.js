@@ -1,4 +1,4 @@
-const BASE_URL = "https://primesol.co";
+const BASE_URL = "https://www.primesol.co";
 
 const serviceslugs = [
     "ai-automation",

@@ -16,13 +16,13 @@ export const metadata = {
         "PrimeSol portfolio",
     ],
     alternates: {
-        canonical: "https://primesol.co/projects",
+        canonical: "https://www.primesol.co/projects",
     },
     openGraph: {
         title: "Projects | Portfolio of Web, Mobile & AI Work",
         description:
             "Browse PrimeSol's project portfolio: CRM dashboards, SaaS platforms, e-commerce stores, mobile apps, AI tools, and websites built for real business needs.",
-        url: "https://primesol.co/projects",
+        url: "https://www.primesol.co/projects",
         type: "website",
     },
     twitter: {

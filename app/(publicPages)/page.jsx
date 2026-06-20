@@ -15,13 +15,13 @@ export const metadata = {
         "business process automation",
     ],
     alternates: {
-        canonical: "https://primesol.co",
+        canonical: "https://www.primesol.co",
     },
     openGraph: {
         title: "PrimeSol | AI Automation, SaaS & Software Development",
         description:
             "PrimeSol builds AI automation systems, SaaS products, web applications, mobile apps, and custom software solutions for growing businesses.",
-        url: "https://primesol.co",
+        url: "https://www.primesol.co",
         type: "website",
     },
     twitter: {
